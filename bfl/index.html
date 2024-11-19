@@ -41,16 +41,14 @@
             min-height: 100vh;
         }
 
-        .bd-placeholder-img {
-            aspect-ratio: 16/9;
-        }
-
         .menu-btn {
-            min-width: 260px;
+            width: 260px;
+            max-width: 100%;
         }
 
         .play-btn {
-            min-width: 260px;
+            width: 260px;
+            max-width: 100%;
         }
     </style>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -61,10 +59,10 @@
     <main>
         <section class="text-center container pb-5">
             <div class="row pb-lg-5">
-                <div class="col-lg-6 col-md-10 mx-auto">
+                <div class="col-lg-8 col-md-10 col-sm-10 mx-auto">
                     <h1 class="fw-medium">Bruxelles Formation</h1>
                     <ul class="nav nav-pills justify-content-around">
-                        <li class="nav-item">
+                        <li class="nav-item mb-sm-2">
                             <button id="tab1" class="btn btn-primary menu-btn active" data-bs-toggle="pill"
                                     data-bs-target="#lang-presentation-tab" type="button" role="tab"
                                     aria-controls="pills-home" aria-selected="true">Nos
@@ -72,7 +70,7 @@
                                 valeurs
                             </button>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item mb-sm-2">
                             <button id="tab2" class="btn btn-primary menu-btn" data-bs-toggle="pill"
                                     data-bs-target="#charter-ai-tab" type="button" role="tab" aria-controls="pills-home"
                                     aria-selected="false">Notre charte
@@ -88,12 +86,10 @@
                 <div class="row row-cols-3 g-3">
                     <div class="col">
                         <div class="card shadow-sm">
-                            <div class="video-container">
-                                <video id="welcome-en" width="100%" height="auto">
-                                    <source src="media/welcome-en.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
+                            <video id="welcome-en" width="100%" height="auto">
+                                <source src="media/welcome-en.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                             <div class="card-body">
                                 <div class="card-text justify-content-center d-flex">
                                     <button type="button"
@@ -136,12 +132,10 @@
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <div class="video-container">
-                                <video id="bien-fr" width="100%" height="auto">
-                                    <source src="media/bienvenue_fr.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
+                            <video id="bien-fr" width="100%" height="auto">
+                                <source src="media/bienvenue_fr.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                             <div class="card-body">
                                 <div class="card-text justify-content-center d-flex">
                                     <button type="button"

@@ -1,0 +1,25 @@
+#messageField {
+    width: 480px;
+    padding: 12px;
+    margin: 18px;
+    overflow-wrap: break-word;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0000ff;
+    box-shadow: 0 0 6px 3px #c6c6c6;
+    text-align: center;
+}
+#micButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+#micButton svg {
+    width: 40px;
+    height: 40px;
+    fill: #000; /* Default color black */
+}
+.recording svg {
+    fill: #ff0000!important; /* Turns mic red when recording */
+}

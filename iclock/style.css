@@ -1,0 +1,335 @@
+:root {
+    font-family: system-ui, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 40px;
+}
+
+.clock {
+    width: 480px;
+    height: 480px;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 3px #c6c6c6;
+}
+
+.scale-line {
+    width: 2px;
+    height: 480px;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.scale-1 {
+    transform: rotate(6deg);
+}
+
+.scale-2 {
+    transform: rotate(12deg);
+}
+
+.scale-3 {
+    transform: rotate(18deg);
+}
+
+.scale-4 {
+    transform: rotate(24deg);
+}
+
+.scale-5 {
+    width: 4px;
+    border-top: solid 32px #000;
+    border-bottom: solid 32px #000;
+    transform: rotate(30deg);
+}
+
+.scale-6 {
+    transform: rotate(36deg);
+}
+
+.scale-7 {
+    transform: rotate(42deg);
+}
+
+.scale-8 {
+    transform: rotate(48deg);
+}
+
+.scale-9 {
+    transform: rotate(54deg);
+}
+
+.scale-10 {
+    width: 4px;
+    border-top: solid 32px #000;
+    border-bottom: solid 32px #000;
+    transform: rotate(60deg);
+}
+
+.scale-11 {
+    transform: rotate(66deg);
+}
+
+.scale-12 {
+    transform: rotate(72deg);
+}
+
+.scale-13 {
+    transform: rotate(78deg);
+}
+
+.scale-14 {
+    transform: rotate(84deg);
+}
+
+.scale-15 {
+    width: 4px;
+    border-top: solid 32px #000;
+    border-bottom: solid 32px #000;
+    transform: rotate(90deg);
+}
+
+.scale-16 {
+    transform: rotate(96deg);
+}
+
+.scale-17 {
+    transform: rotate(102deg);
+}
+
+.scale-18 {
+    transform: rotate(108deg);
+}
+
+.scale-19 {
+    transform: rotate(114deg);
+}
+
+.scale-20 {
+    width: 4px;
+    border-top: solid 32px #000;
+    border-bottom: solid 32px #000;
+    transform: rotate(120deg);
+}
+
+.scale-21 {
+    transform: rotate(126deg);
+}
+
+.scale-22 {
+    transform: rotate(132deg);
+}
+
+.scale-23 {
+    transform: rotate(138deg);
+}
+
+.scale-24 {
+    transform: rotate(144deg);
+}
+
+.scale-25 {
+    width: 4px;
+    border-top: solid 32px #000;
+    border-bottom: solid 32px #000;
+    transform: rotate(150deg);
+}
+
+.scale-26 {
+    transform: rotate(156deg);
+}
+
+.scale-27 {
+    transform: rotate(162deg);
+}
+
+.scale-28 {
+    transform: rotate(168deg);
+}
+
+.scale-29 {
+    transform: rotate(174deg);
+}
+
+.scale-30 {
+    width: 4px;
+    border-top: solid 32px #000;
+    border-bottom: solid 32px #000;
+    transform: rotate(180deg);
+}
+
+.small-scale {
+    border-top: solid 16px #000;
+    border-bottom: solid 16px #000;
+}
+
+.big-scale {
+    border-top: solid 32px #000;
+    border-bottom: solid 32px #000;
+}
+
+.hour {
+    height: 484px;
+    box-sizing: border-box;
+    position: absolute;
+    font-size: 48px;
+    font-weight: 800;
+    padding-top: 32px;
+    text-align: end;
+    color: #000;
+}
+
+.hour-1 {
+    transform: rotate(30deg);
+}
+
+.hour-2 {
+    transform: rotate(60deg);
+}
+
+.hour-3 {
+    transform: rotate(90deg);
+}
+
+.hour-4 {
+    transform: rotate(120deg);
+}
+
+.hour-5 {
+    transform: rotate(150deg);
+}
+
+.hour-6 {
+    transform: rotate(180deg);
+}
+
+.hour-7 {
+    transform: rotate(210deg);
+}
+
+.hour-8 {
+    transform: rotate(240deg);
+}
+
+.hour-9 {
+    transform: rotate(270deg);
+}
+
+.hour-10 {
+    transform: rotate(300deg);
+}
+
+.hour-11 {
+    transform: rotate(330deg);
+}
+
+.hour-12 {
+    transform: rotate(360deg);
+}
+
+.hour-label-1 {
+    display: block;
+    transform: rotate(-30deg);
+}
+
+.hour-label-2 {
+    display: block;
+    transform: rotate(-60deg);
+}
+
+.hour-label-3 {
+    display: block;
+    transform: rotate(-90deg);
+}
+
+.hour-label-4 {
+    display: block;
+    transform: rotate(-120deg);
+}
+
+.hour-label-5 {
+    display: block;
+    transform: rotate(-150deg);
+}
+
+.hour-label-6 {
+    display: block;
+    transform: rotate(-180deg);
+}
+
+.hour-label-7 {
+    display: block;
+    transform: rotate(-210deg);
+}
+
+.hour-label-8 {
+    display: block;
+    transform: rotate(-240deg);
+}
+
+.hour-label-9 {
+    display: block;
+    transform: rotate(-270deg);
+}
+
+.hour-label-10 {
+    display: block;
+    transform: rotate(-300deg);
+}
+
+.hour-label-11 {
+    display: block;
+    transform: rotate(-330deg);
+}
+
+.hour-label-12 {
+    display: block;
+    transform: rotate(-360deg);
+}
+
+.hand {
+    position: absolute;
+    box-sizing: border-box;
+    --rotation: 0;
+    transition: transform 1s ease-in-out;
+}
+
+div#hour-hand {
+    z-index: 1000;
+    height: 290px;
+    width: 8px;
+    background-color: #ffffff00;
+    transform: rotate(calc(var(--rotation) * 1deg));
+    border-top: solid 180px #000;
+    border-radius: 6px;
+}
+
+div#minute-hand {
+    z-index: 1000;
+    height: 410px;
+    width: 8px;
+    background-color: #ffffff00;
+    transform: rotate(calc(var(--rotation) * 1deg));
+    border-top: solid 240px #000;
+    border-radius: 4px;
+}
+
+div#center {
+    z-index: 1000;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #000000;
+    border-radius: 50%;
+}

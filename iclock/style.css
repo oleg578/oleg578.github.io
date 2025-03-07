@@ -1,5 +1,5 @@
 html {
-  font-family: "DM Serif Text", serif, Helvetica, Arial, sans-serif;
+  font-family: san-serif,serif, Helvetica, Arial;;
   font-weight: 400;
   font-style: normal;
   line-height: 1.5;
@@ -193,7 +193,7 @@ body {
   box-sizing: border-box;
   position: absolute;
   font-size: 40px;
-  padding-top: 40px;
+  padding-top: 30px;
   text-align: end;
   color: #000;
 }
@@ -340,6 +340,9 @@ div#minute-hand {
   div#hour-hand {
     height: 240px;
     border-top: solid 140px #000;
+  }
+  .hour {
+    padding-top: 40px;
   }
 }
 

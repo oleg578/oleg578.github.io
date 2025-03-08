@@ -342,6 +342,10 @@ div#minute-hand {
   .scale-line {
     height: 280px;
   }
+  .big-scale {
+    border-top: solid 26px #000;
+    border-bottom: solid 26px #000;
+  }
   div#minute-hand {
     height: 220px;
     border-top: solid 136px #000;

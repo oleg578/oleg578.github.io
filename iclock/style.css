@@ -22,8 +22,6 @@ body {
   position: relative;
   width: 480px;
   height: 480px;
-  max-width: 90vw;
-  max-height: 90vw;
   display: grid;
   place-items: center;
   background: #fff;
@@ -34,7 +32,6 @@ body {
 .scale-line {
   width: 2px;
   height: 480px;
-  max-height: 90vw;
   box-sizing: border-box;
   position: absolute;
 }
@@ -189,7 +186,6 @@ body {
 
 .hour {
   height: 484px;
-  max-height: 100vw;
   box-sizing: border-box;
   position: absolute;
   font-size: 40px;
@@ -333,19 +329,33 @@ div#minute-hand {
   border-radius: 4px;
 }
 @media screen and (max-width: 768px) {
+  body {
+    place-items: normal;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 340px 120px 120px;
+  }
+  .clock {
+    width: 280px;
+    height: 280px;
+  }
+  .scale-line {
+    height: 280px;
+  }
   div#minute-hand {
-    height: 320px;
-    border-top: solid 180px #000;;
+    height: 220px;
+    border-top: solid 136px #000;
   }
   div#hour-hand {
-    height: 240px;
-    border-top: solid 140px #000;
+    height: 165px;
+    border-top: solid 105px #000;
   }
   .hour {
     padding-top: 40px;
+    height: 310px;
+    font-size: 24px;
   }
 }
-
 
 div#center {
   z-index: 1000;

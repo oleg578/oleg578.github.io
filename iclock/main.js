@@ -13,4 +13,4 @@ var setClock = function (h,m) {
     minuteHand.style.setProperty('--rotation', minutesDeg);
 
 };
-//setClock(hours,minutes);
+setClock(hours,minutes);

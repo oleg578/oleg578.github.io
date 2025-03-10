@@ -1,3 +1,6 @@
 node_modules/
 misc/
 src/
+dev/
+dist/
+*.log

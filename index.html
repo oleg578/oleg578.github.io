@@ -13,7 +13,17 @@
             font-family: ui-sans, system-ui, sans, sans-serif;
         }
 
-        body {
+        main {
+            padding: 16px;
+            display: grid;
+            gap: 24px;
+        }
+
+        .chapter-header {
+            font-size: 18px;
+            padding: 6px;
+            width: 208px;
+            box-shadow: -2px 6px 3px -6px #444444;
         }
 
         nav {
@@ -37,10 +47,22 @@
             font-weight: 600;
             font-size: 24px;
         }
+
         .mygit-link {
             text-align: end;
             font-size: 12px;
             font-style: italic;
+        }
+
+        @media screen and (max-width: 8in) {
+            .mygit-link {
+                display: none;
+            }
+
+            nav {
+                grid-template-columns: 36px 1fr;
+                justify-items: center;
+            }
         }
     </style>
 </head>
@@ -58,6 +80,15 @@
         github.com/oleg578
     </a>
 </nav>
-<main></main>
+<main>
+    <section>
+        <div class="chapter-header">Articles</div>
+        <div class="article-container"></div>
+    </section>
+    <section>
+        <div class="chapter-header">Misc</div>
+        <div class="card-container"></div>
+    </section>
+</main>
 </body>
 </html>

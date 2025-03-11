@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Oleh Nahornyi</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
     <link rel="stylesheet" href="css-dist/normalize.min.css">
     <style>
         html {
@@ -17,15 +21,24 @@
             top: 0;
             padding: 1rem;
             margin: 0 auto;
+            box-shadow: 0 12px 3px -12px #444444;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        .nav-link>span {
             font-weight: 600;
             font-size: x-large;
-            box-shadow: 0 12px 3px -12px #444444;
         }
     </style>
 </head>
 <body>
 <nav>
-    <span>Oleh Nahornyi</span>
+    <a href="/" class="nav-link">
+        <span>Oleh Nahornyi</span>
+    </a>
 </nav>
 <main></main>
 </body>

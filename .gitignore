@@ -5,3 +5,4 @@ dev/
 dist/
 *.log
 *.json
+!french_*.json

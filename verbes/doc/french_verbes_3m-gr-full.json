@@ -1,7 +1,7 @@
 {
     "metadata": {
         "title": "Des verbes français du 3ème groupe",
-        "total_verbs": 327,
+        "total_verbs": 330,
         "conjugation_groups": 12,
         "description": "Des verbes avec conjugaison au présent et regroupement par types"
     },
@@ -296,7 +296,7 @@
             "verbs": [
                 {
                     "infinitive": "sentir",
-                    "verbes_du_type": "consentir, démentir, départir, mentir, partir, pressentir, repartir, repentir, ressentir, ressortir, sortir",
+                    "verbes_du_type": "consentir, pressentir, ressentir",
                     "rank": 24,
                     "translation": "чувствовать",
                     "present_tense": {
@@ -324,7 +324,7 @@
                 },
                 {
                     "infinitive": "démentir",
-                    "verbes_du_type": "",
+                    "verbes_du_type": "отрицать",
                     "rank": 24,
                     "translation": "чувствовать",
                     "present_tense": {
@@ -1202,7 +1202,7 @@
                 },
                 {
                     "infinitive": "rompre",
-                    "verbes_du_type": "",
+                    "verbes_du_type": "corrompre, interrompre",
                     "rank": 255,
                     "translation": "ломать, разрывать",
                     "present_tense": {

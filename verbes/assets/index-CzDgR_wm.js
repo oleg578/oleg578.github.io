@@ -19,17 +19,15 @@
                 <span class="text-sm text-gray-500">${e.verbes_du_type||""}</span>
             </div>
             <div class="space-y-2">
-                <div class="space-y-1">
                     <h4 class="text-sm md:text-base font-medium text-gray-600">Présent</h4>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                    <div class="grid grid-rows-3 grid-cols-2 md:grid-cols-3 gap-2 grid-flow-col">
                         ${Object.entries(e.present_tense).map(([t,s])=>`
                             <div class="text-sm md:text-base text-gray-700">
                                 <span class="font-medium">${t}</span>
                                 <span class="text-gray-500">:</span>
-                                <span class="ml-1">${s}</span>
+                                <span class="ml-1 text-blue-900">${s}</span>
                             </div>
                         `).join("")}
                     </div>
-                </div>
             </div>
         `,n}C()});

@@ -14,6 +14,7 @@
                     "infinitive": "être",
                     "verbes_du_type": "",
                     "rank": 1,
+                    "justification": "Verbe le plus utilisé, auxiliaire principal et essentiel dans toutes les constructions grammaticales.",
                     "translation": "быть",
                     "present_tense": {
                         "je": "suis",
@@ -28,6 +29,7 @@
                     "infinitive": "avoir",
                     "verbes_du_type": "",
                     "rank": 2,
+                    "justification": "Auxiliaire clé pour les temps composés, très courant pour exprimer la possession.",
                     "translation": "иметь",
                     "present_tense": {
                         "je": "ai",
@@ -42,6 +44,7 @@
                     "infinitive": "faire",
                     "verbes_du_type": "contrefaire, défaire, parfaire, redéfaire, refaire, satisfaire",
                     "rank": 3,
+                    "justification": "Extrêmement polyvalent, utilisé dans de nombreuses expressions idiomatiques et pour décrire des actions.",
                     "translation": "делать",
                     "present_tense": {
                         "je": "fais",
@@ -56,6 +59,7 @@
                     "infinitive": "aller",
                     "verbes_du_type": "",
                     "rank": 6,
+                    "justification": "Courant pour le mouvement, le futur proche et des expressions comme 'ça va'.",
                     "translation": "идти",
                     "present_tense": {
                         "je": "vais",
@@ -77,6 +81,7 @@
                     "infinitive": "dire",
                     "verbes_du_type": "redire",
                     "rank": 4,
+                    "justification": "Fréquent dans la communication orale et écrite, notamment pour rapporter des propos.",
                     "translation": "говорить",
                     "present_tense": {
                         "je": "dis",
@@ -90,7 +95,8 @@
                 {
                     "infinitive": "lire",
                     "verbes_du_type": "élire, réélire, relire",
-                    "rank": 31,
+                    "rank": 19,
+                    "justification": "Commun dans les contextes éducatifs, littéraires et quotidiens.",
                     "translation": "читать",
                     "present_tense": {
                         "je": "lis",
@@ -112,6 +118,7 @@
                     "infinitive": "pouvoir",
                     "verbes_du_type": "",
                     "rank": 5,
+                    "justification": "Verbe modal essentiel pour exprimer la capacité ou la possibilité.",
                     "translation": "мочь",
                     "present_tense": {
                         "je": "peux",
@@ -126,6 +133,7 @@
                     "infinitive": "vouloir",
                     "verbes_du_type": "",
                     "rank": 9,
+                    "justification": "Commun pour exprimer le désir ou la volonté.",
                     "translation": "хотеть",
                     "present_tense": {
                         "je": "veux",
@@ -139,7 +147,8 @@
                 {
                     "infinitive": "valoir",
                     "verbes_du_type": "équevaloir, revaloir",
-                    "rank": 223,
+                    "rank": 40,
+                    "justification": "Fréquent dans des expressions comme 'valoir la peine', mais moins courant.",
                     "translation": "стоить",
                     "present_tense": {
                         "je": "vaux",
@@ -153,7 +162,8 @@
                 {
                     "infinitive": "prévaloir",
                     "verbes_du_type": "",
-                    "rank": 225,
+                    "rank": 72,
+                    "justification": "Rare, utilisé dans des contextes juridiques ou formels.",
                     "translation": "превосходить",
                     "present_tense": {
                         "je": "prévaux",
@@ -175,6 +185,7 @@
                     "infinitive": "voir",
                     "verbes_du_type": "entrevoir, revoir",
                     "rank": 7,
+                    "justification": "Très utilisé pour la perception visuelle et dans des contextes abstraits (ex. : 'voir un problème').",
                     "translation": "видеть",
                     "present_tense": {
                         "je": "vois",
@@ -189,6 +200,7 @@
                     "infinitive": "savoir",
                     "verbes_du_type": "",
                     "rank": 8,
+                    "justification": "Fréquent pour exprimer la connaissance ou le savoir-faire.",
                     "translation": "знать",
                     "present_tense": {
                         "je": "sais",
@@ -210,6 +222,7 @@
                     "infinitive": "venir",
                     "verbes_du_type": "advenir, circonvenir, contrevenir, convenir, devenir, disconvenir, intervenir, parvenir, prévenir, provenir, redevenir, revenir, souvenir, subvenir, survenir",
                     "rank": 10,
+                    "justification": "Utilisé pour le mouvement, les temps composés (passé récent) et des expressions courantes.",
                     "translation": "приходить",
                     "present_tense": {
                         "je": "viens",
@@ -223,7 +236,8 @@
                 {
                     "infinitive": "tenir",
                     "verbes_du_type": "abstenir, appartenir, contenir, détenir, entretenir, maintenir, obtenir, retenir, soutenir",
-                    "rank": 16,
+                    "rank": 20,
+                    "justification": "Utilisé pour des sens physiques (tenir quelque chose) et abstraits (tenir une promesse).",
                     "translation": "держать",
                     "present_tense": {
                         "je": "tiens",
@@ -237,7 +251,8 @@
                 {
                     "infinitive": "devenir",
                     "verbes_du_type": "",
-                    "rank": 118,
+                    "rank": 26,
+                    "justification": "Fréquent pour décrire un changement d'état.",
                     "translation": "становиться",
                     "present_tense": {
                         "je": "deviens",
@@ -257,7 +272,8 @@
                 {
                     "infinitive": "prendre",
                     "verbes_du_type": "apprendre, comprendre, déprendre, désapprendre, entreprendre, éprendre, méprendre, r(é)apprendre, reprendre, surprendre",
-                    "rank": 14,
+                    "rank": 11,
+                    "justification": "Très courant dans divers contextes (prendre un objet, une décision, etc.).",
                     "translation": "брать",
                     "present_tense": {
                         "je": "prends",
@@ -278,6 +294,7 @@
                     "infinitive": "mettre",
                     "verbes_du_type": "admettre, commettre, compromettre, démettre, émettre, entremettre, omettre, permettre, promettre, remettre, retransmettre, soumettre, transmettre",
                     "rank": 15,
+                    "justification": "Utilisé dans de nombreux contextes (placer, mettre en place, etc.).",
                     "translation": "класть",
                     "present_tense": {
                         "je": "mets",
@@ -295,51 +312,10 @@
             "pattern": "Perte de la consonne au singulier",
             "verbs": [
                 {
-                    "infinitive": "sentir",
-                    "verbes_du_type": "consentir, démentir, départir, mentir, partir, pressentir, repartir, repentir, ressentir, ressortir, sortir",
-                    "rank": 24,
-                    "translation": "чувствовать",
-                    "present_tense": {
-                        "je": "sens",
-                        "tu": "sens",
-                        "il/elle": "sent",
-                        "nous": "sentons",
-                        "vous": "sentez",
-                        "ils/elles": "sentent"
-                    }
-                },
-                {
-                    "infinitive": "mentir",
-                    "verbes_du_type": "",
-                    "rank": 24,
-                    "translation": "лгать",
-                    "present_tense": {
-                        "je": "mens",
-                        "tu": "mens",
-                        "il/elle": "ment",
-                        "nous": "mentons",
-                        "vous": "mentez",
-                        "ils/elles": "mentent"
-                    }
-                },
-                {
-                    "infinitive": "démentir",
-                    "verbes_du_type": "",
-                    "rank": 24,
-                    "translation": "чувствовать",
-                    "present_tense": {
-                        "je": "démens",
-                        "tu": "démens",
-                        "il/elle": "dément",
-                        "nous": "démentons",
-                        "vous": "démentez",
-                        "ils/elles": "démentent"
-                    }
-                },
-                {
                     "infinitive": "sortir",
                     "verbes_du_type": "ressortir",
                     "rank": 24,
+                    "justification": "Courant pour le mouvement ou dans des expressions comme 'sortir ensemble'.",
                     "translation": "выходить",
                     "present_tense": {
                         "je": "sors",
@@ -354,6 +330,7 @@
                     "infinitive": "partir",
                     "verbes_du_type": "départir, repartir",
                     "rank": 25,
+                    "justification": "Similaire à 'sortir', mais légèrement moins fréquent dans certains contextes.",
                     "translation": "уезжать",
                     "present_tense": {
                         "je": "pars",
@@ -365,23 +342,10 @@
                     }
                 },
                 {
-                    "infinitive": "repentir",
-                    "verbes_du_type": "",
-                    "rank": 25,
-                    "translation": "раскаиваться",
-                    "present_tense": {
-                        "je": "repens",
-                        "tu": "repens",
-                        "il/elle": "repent",
-                        "nous": "repentons",
-                        "vous": "repentez",
-                        "ils/elles": "repentent"
-                    }
-                },
-                {
                     "infinitive": "servir",
                     "verbes_du_type": "desservir, resservir",
                     "rank": 29,
+                    "justification": "Fréquent dans des contextes pratiques ou idiomatiques (servir à table, servir à quelque chose).",
                     "translation": "служить",
                     "present_tense": {
                         "je": "sers",
@@ -391,6 +355,66 @@
                         "vous": "servez",
                         "ils/elles": "servent"
                     }
+                },
+                {
+                    "infinitive": "sentir",
+                    "verbes_du_type": "consentir, démentir, départir, mentir, partir, pressentir, repartir, repentir, ressentir, ressortir, sortir",
+                    "rank": 34,
+                    "justification": "Courant pour les sensations physiques ou émotionnelles.",
+                    "translation": "чувствовать",
+                    "present_tense": {
+                        "je": "sens",
+                        "tu": "sens",
+                        "il/elle": "sent",
+                        "nous": "sentons",
+                        "vous": "sentez",
+                        "ils/elles": "sentent"
+                    }
+                },
+                {
+                    "infinitive": "mentir",
+                    "verbes_du_type": "",
+                    "rank": 55,
+                    "justification": "Moins fréquent, utilisé dans des contextes narratifs ou éthiques.",
+                    "translation": "лгать",
+                    "present_tense": {
+                        "je": "mens",
+                        "tu": "mens",
+                        "il/elle": "ment",
+                        "nous": "mentons",
+                        "vous": "mentez",
+                        "ils/elles": "mentent"
+                    }
+                },
+                {
+                    "infinitive": "démentir",
+                    "verbes_du_type": "",
+                    "rank": 69,
+                    "justification": "Rare, utilisé dans des contextes de démenti formel.",
+                    "translation": "чувствовать",
+                    "present_tense": {
+                        "je": "démens",
+                        "tu": "démens",
+                        "il/elle": "dément",
+                        "nous": "démentons",
+                        "vous": "démentez",
+                        "ils/elles": "démentent"
+                    }
+                },
+                {
+                    "infinitive": "repentir",
+                    "verbes_du_type": "",
+                    "rank": 70,
+                    "justification": "Très rare, souvent remplacé par 'se repentir' dans un registre religieux.",
+                    "translation": "раскаиваться",
+                    "present_tense": {
+                        "je": "repens",
+                        "tu": "repens",
+                        "il/elle": "repent",
+                        "nous": "repentons",
+                        "vous": "repentez",
+                        "ils/elles": "repentent"
+                    }
                 }
             ]
         },
@@ -399,23 +423,10 @@
             "pattern": "Conjugaison comme les verbes du 1er groupe au présent",
             "verbs": [
                 {
-                    "infinitive": "ouvrir",
-                    "verbes_du_type": "recouvrir, redécouvrir, rouvrir, ",
-                    "rank": 26,
-                    "translation": "открывать",
-                    "present_tense": {
-                        "je": "ouvre",
-                        "tu": "ouvres",
-                        "il/elle": "ouvre",
-                        "nous": "ouvrons",
-                        "vous": "ouvrez",
-                        "ils/elles": "ouvrent"
-                    }
-                },
-                {
                     "infinitive": "offrir",
                     "verbes_du_type": "souffrir",
-                    "rank": 38,
+                    "rank": 30,
+                    "justification": "Commun pour parler de dons ou d'offres.",
                     "translation": "предлагать",
                     "present_tense": {
                         "je": "offre",
@@ -427,23 +438,25 @@
                     }
                 },
                 {
-                    "infinitive": "entrouvrir",
-                    "verbes_du_type": "",
-                    "rank": 38,
-                    "translation": "приоткрывать",
+                    "infinitive": "ouvrir",
+                    "verbes_du_type": "recouvrir, redécouvrir, rouvrir, ",
+                    "rank": 31,
+                    "justification": "Utilisé dans des contextes physiques et figurés (ouvrir une porte, ouvrir une discussion).",
+                    "translation": "открывать",
                     "present_tense": {
-                        "je": "entrouvre",
-                        "tu": "entrouvres",
-                        "il/elle": "entrouvre",
-                        "nous": "entrouvrons",
-                        "vous": "entrouvrez",
-                        "ils/elles": "entrouvrent"
+                        "je": "ouvre",
+                        "tu": "ouvres",
+                        "il/elle": "ouvre",
+                        "nous": "ouvrons",
+                        "vous": "ouvrez",
+                        "ils/elles": "ouvrent"
                     }
                 },
                 {
                     "infinitive": "couvrir",
                     "verbes_du_type": "découvrir, recouvrir, redécouvrir",
-                    "rank": 100,
+                    "rank": 39,
+                    "justification": "Utilisé dans des contextes spécifiques (couvrir une surface, un sujet).",
                     "translation": "покрывать",
                     "present_tense": {
                         "je": "couvre",
@@ -452,6 +465,21 @@
                         "nous": "couvrons",
                         "vous": "couvrez",
                         "ils/elles": "couvrent"
+                    }
+                },
+                {
+                    "infinitive": "entrouvrir",
+                    "verbes_du_type": "",
+                    "rank": 71,
+                    "justification": "Rare, utilisé pour des actions spécifiques (entrouvrir une porte).",
+                    "translation": "приоткрывать",
+                    "present_tense": {
+                        "je": "entrouvre",
+                        "tu": "entrouvres",
+                        "il/elle": "entrouvre",
+                        "nous": "entrouvrons",
+                        "vous": "entrouvrez",
+                        "ils/elles": "entrouvrent"
                     }
                 }
             ]
@@ -463,7 +491,8 @@
                 {
                     "infinitive": "connaître",
                     "verbes_du_type": "apparaître, comparaître, disparaître, réapparaître, méconnaître, reconnaître, transparaître",
-                    "rank": 17,
+                    "rank": 16,
+                    "justification": "Fréquent pour exprimer la connaissance d'une personne ou d'un sujet.",
                     "translation": "знать",
                     "present_tense": {
                         "je": "connais",
@@ -475,23 +504,10 @@
                     }
                 },
                 {
-                    "infinitive": "paraître",
-                    "verbes_du_type": "apparaître, comparaître, disparaître, réapparaître, transparaître",
-                    "rank": 18,
-                    "translation": "казаться",
-                    "present_tense": {
-                        "je": "parais",
-                        "tu": "parais",
-                        "il/elle": "paraît",
-                        "nous": "paraissons",
-                        "vous": "paraissez",
-                        "ils/elles": "paraissent"
-                    }
-                },
-                {
                     "infinitive": "naître",
                     "verbes_du_type": "renaître",
-                    "rank": 34,
+                    "rank": 35,
+                    "justification": "Moins fréquent, utilisé dans des contextes biographiques ou narratifs.",
                     "translation": "рождаться",
                     "present_tense": {
                         "je": "nais",
@@ -501,6 +517,21 @@
                         "vous": "naissez",
                         "ils/elles": "naissent"
                     }
+                },
+                {
+                    "infinitive": "paraître",
+                    "verbes_du_type": "apparaître, comparaître, disparaître, réapparaître, transparaître",
+                    "rank": 61,
+                    "justification": "Moins fréquent, utilisé dans des contextes formels ou littéraires.",
+                    "translation": "казаться",
+                    "present_tense": {
+                        "je": "parais",
+                        "tu": "parais",
+                        "il/elle": "paraît",
+                        "nous": "paraissons",
+                        "vous": "paraissez",
+                        "ils/elles": "paraissent"
+                    }
                 }
             ]
         },
@@ -509,23 +540,10 @@
             "pattern": "Perte du -e à la 3ème personne du singulier",
             "verbs": [
                 {
-                    "infinitive": "rendre",
-                    "verbes_du_type": "appendre, attendre, confondre, correspondre, défendre, démordre, dépendre, descendre, détendre, distendre, distordre, entendre, étendre, fendre, fondre, mordre, morfondre, pendre, perdre, pondre, pourfendre, prétendre, redescendre, refondre, rependre, répondre, revendre, sous-entendre, sous-tendre, suspendre, tendre, tondre, tordre, vendre",
-                    "rank": 20,
-                    "translation": "возвращать",
-                    "present_tense": {
-                        "je": "rends",
-                        "tu": "rends",
-                        "il/elle": "rend",
-                        "nous": "rendons",
-                        "vous": "rendez",
-                        "ils/elles": "rendent"
-                    }
-                },
-                {
                     "infinitive": "répondre",
                     "verbes_du_type": "",
                     "rank": 21,
+                    "justification": "Fréquent dans les dialogues et interactions.",
                     "translation": "отвечать",
                     "present_tense": {
                         "je": "réponds",
@@ -540,6 +558,7 @@
                     "infinitive": "attendre",
                     "verbes_du_type": "",
                     "rank": 22,
+                    "justification": "Commun pour exprimer l'attente ou l'anticipation.",
                     "translation": "ждать",
                     "present_tense": {
                         "je": "attends",
@@ -548,6 +567,21 @@
                         "nous": "attendons",
                         "vous": "attendez",
                         "ils/elles": "attendent"
+                    }
+                },
+                {
+                    "infinitive": "rendre",
+                    "verbes_du_type": "appendre, attendre, confondre, correspondre, défendre, démordre, dépendre, descendre, détendre, distendre, distordre, entendre, étendre, fendre, fondre, mordre, morfondre, pendre, perdre, pondre, pourfendre, prétendre, redescendre, refondre, rependre, répondre, revendre, sous-entendre, sous-tendre, suspendre, tendre, tondre, tordre, vendre",
+                    "rank": 23,
+                    "justification": "Utilisé dans divers contextes (rendre service, rendre quelque chose).",
+                    "translation": "возвращать",
+                    "present_tense": {
+                        "je": "rends",
+                        "tu": "rends",
+                        "il/elle": "rend",
+                        "nous": "rendons",
+                        "vous": "rendez",
+                        "ils/elles": "rendent"
                     }
                 }
             ]
@@ -559,7 +593,8 @@
                 {
                     "infinitive": "falloir",
                     "verbes_du_type": "",
-                    "rank": 11,
+                    "rank": 12,
+                    "justification": "Essentiel pour exprimer la nécessité ou l'obligation impersonnelle.",
                     "translation": "быть нужным",
                     "present_tense": {
                         "je": " - ",
@@ -573,7 +608,8 @@
                 {
                     "infinitive": "devoir",
                     "verbes_du_type": "redevoir",
-                    "rank": 12,
+                    "rank": 13,
+                    "justification": "Fréquent pour indiquer l'obligation ou la probabilité.",
                     "translation": "долженствовать",
                     "present_tense": {
                         "je": "dois",
@@ -587,7 +623,23 @@
                 {
                     "infinitive": "croire",
                     "verbes_du_type": "",
-                    "rank": 13,
+                    "rank": 14,
+                    "justification": "Commun pour exprimer une opinion ou une croyance.",
+                    "translation": "верить",
+                    "present_tense": {
+                        "je": "crois",
+                        "tu": "crois",
+                        "il/elle": "croit",
+                        "nous": "croyons",
+                        "vous": "croyez",
+                        "ils/elles": "croient"
+                    }
+                },
+                {
+                    "infinitive": "croire",
+                    "verbes_du_type": "",
+                    "rank": 14,
+                    "justification": "Commun pour exprimer une opinion ou une croyance.",
                     "translation": "верить",
                     "present_tense": {
                         "je": "crois",
@@ -601,7 +653,8 @@
                 {
                     "infinitive": "vivre",
                     "verbes_du_type": "revivre, survivre",
-                    "rank": 23,
+                    "rank": 17,
+                    "justification": "Courant pour parler de l'existence ou des expériences.",
                     "translation": "жить",
                     "present_tense": {
                         "je": "vis",
@@ -615,7 +668,8 @@
                 {
                     "infinitive": "écrire",
                     "verbes_du_type": "circonscrire, décrire, inscrire, prescrire, proscrire, ré(é)crire, réinscrire, retranscrire, souscrire, transcrire",
-                    "rank": 30,
+                    "rank": 18,
+                    "justification": "Fréquent dans les contextes écrits et pour la communication.",
                     "translation": "писать",
                     "present_tense": {
                         "je": "écris",
@@ -629,7 +683,8 @@
                 {
                     "infinitive": "boire",
                     "verbes_du_type": "",
-                    "rank": 32,
+                    "rank": 27,
+                    "justification": "Commun dans la vie quotidienne (boire un verre, etc.).",
                     "translation": "пить",
                     "present_tense": {
                         "je": "bois",
@@ -641,9 +696,25 @@
                     }
                 },
                 {
+                    "infinitive": "suivre",
+                    "verbes_du_type": "poursuivre, s'ensuivre, ensuivre",
+                    "rank": 28,
+                    "justification": "Utilisé pour indiquer un suivi (une personne, un cours, etc.).",
+                    "translation": "следовать, идти за",
+                    "present_tense": {
+                        "je": "suis",
+                        "tu": "suis",
+                        "il/elle": "suit",
+                        "nous": "suivons",
+                        "vous": "suivez",
+                        "ils/elles": "suivent"
+                    }
+                },
+                {
                     "infinitive": "courir",
                     "verbes_du_type": "accourir, concourir, discourir, encourir, parcourir, recourir, secourir",
-                    "rank": 255,
+                    "rank": 32,
+                    "justification": "Fréquent dans les contextes sportifs ou figurés (courir un risque).",
                     "translation": "бежать",
                     "present_tense": {
                         "je": "cours",
@@ -655,9 +726,25 @@
                     }
                 },
                 {
+                    "infinitive": "recevoir",
+                    "verbes_du_type": "apercevoir, concevoir, décevoir, entrapercevoir, percevoir",
+                    "rank": 33,
+                    "justification": "Utilisé pour accueillir ou obtenir quelque chose.",
+                    "translation": "получать",
+                    "present_tense": {
+                        "je": "reçois",
+                        "tu": "reçois",
+                        "il/elle": "reçoit",
+                        "nous": "recevons",
+                        "vous": "recevez",
+                        "ils/elles": "reçoivent"
+                    }
+                },
+                {
                     "infinitive": "mourir",
                     "verbes_du_type": "",
-                    "rank": 255,
+                    "rank": 36,
+                    "justification": "Utilisé dans des contextes sérieux ou narratifs, moins fréquent au quotidien.",
                     "translation": "умирать",
                     "present_tense": {
                         "je": "meurs",
@@ -671,7 +758,8 @@
                 {
                     "infinitive": "dormir",
                     "verbes_du_type": "endormir, rendormir",
-                    "rank": 255,
+                    "rank": 37,
+                    "justification": "Commun dans les conversations sur le sommeil ou le repos.",
                     "translation": "спать",
                     "present_tense": {
                         "je": "dors",
@@ -685,7 +773,8 @@
                 {
                     "infinitive": "vêtir",
                     "verbes_du_type": "dévêtir, revêtir",
-                    "rank": 255,
+                    "rank": 38,
+                    "justification": "Moins fréquent, souvent remplacé par 'porter' dans la langue moderne.",
                     "translation": "спать",
                     "present_tense": {
                         "je": "vêts",
@@ -697,303 +786,10 @@
                     }
                 },
                 {
-                    "infinitive": "fuir",
-                    "verbes_du_type": "enfuir",
-                    "rank": 255,
-                    "translation": "мчаться",
-                    "present_tense": {
-                        "je": "fuis",
-                        "tu": "fuis",
-                        "il/elle": "fuit",
-                        "nous": "fuyons",
-                        "vous": "fuyez",
-                        "ils/elles": "fuient"
-                    }
-                },
-                {
-                    "infinitive": "acquérir",
-                    "verbes_du_type": "conquérir, enquérir, quérir, reconquérir, requérir",
-                    "rank": 255,
-                    "translation": "приобретать",
-                    "present_tense": {
-                        "je": "acquiers",
-                        "tu": "acquiers",
-                        "il/elle": "acquiert",
-                        "nous": "acquérons",
-                        "vous": "acquérez",
-                        "ils/elles": "acquièrent"
-                    }
-                },
-                {
-                    "infinitive": "bouillir",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "кипятить",
-                    "present_tense": {
-                        "je": "bous",
-                        "tu": "bous",
-                        "il/elle": "bout",
-                        "nous": "bouillîmes",
-                        "vous": "bouillîtes",
-                        "ils/elles": "bouillirent"
-                    }
-                },
-                {
-                    "infinitive": "cueillir",
-                    "verbes_du_type": "accueillir, recueillir",
-                    "rank": 255,
-                    "translation": "выбирать",
-                    "present_tense": {
-                        "je": "cueille",
-                        "tu": "cueilles",
-                        "il/elle": "cueille",
-                        "nous": "cueillons",
-                        "vous": "cueillez",
-                        "ils/elles": "cueillent"
-                    }
-                },
-                {
-                    "infinitive": "défaillir",
-                    "verbes_du_type": "assaillir, saillir, tressaillir",
-                    "rank": 255,
-                    "translation": "потерпеть неудачу",
-                    "present_tense": {
-                        "je": "défaille",
-                        "tu": "défailles",
-                        "il/elle": "défaille",
-                        "nous": "défaillons",
-                        "vous": "défaillez",
-                        "ils/elles": "défaillent"
-                    }
-                },
-                {
-                    "infinitive": "faillir",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "обанкротиться",
-                    "present_tense": {
-                        "je": "faux",
-                        "tu": "faux",
-                        "il/elle": "faut",
-                        "nous": "faillons",
-                        "vous": "faillez",
-                        "ils/elles": "faillent"
-                    }
-                },
-                {
-                    "infinitive": "ouïr",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "слышать",
-                    "present_tense": {
-                        "je": "ois",
-                        "tu": "ois",
-                        "il/elle": "oit",
-                        "nous": "oyons",
-                        "vous": "oyez",
-                        "ils/elles": "oient"
-                    }
-                },
-                {
-                    "infinitive": "gésir",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "лечь",
-                    "present_tense": {
-                        "je": "gis",
-                        "tu": "gis",
-                        "il/elle": "gît",
-                        "nous": "gisons",
-                        "vous": "gisez",
-                        "ils/elles": "gisent"
-                    }
-                },
-                {
-                    "infinitive": "recevoir",
-                    "verbes_du_type": "apercevoir, concevoir, décevoir, entrapercevoir, percevoir",
-                    "rank": 255,
-                    "translation": "получать",
-                    "present_tense": {
-                        "je": "reçois",
-                        "tu": "reçois",
-                        "il/elle": "reçoit",
-                        "nous": "recevons",
-                        "vous": "recevez",
-                        "ils/elles": "reçoivent"
-                    }
-                },
-                {
-                    "infinitive": "prévoir",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "ожидать",
-                    "present_tense": {
-                        "je": "prévois",
-                        "tu": "prévois",
-                        "il/elle": "prévoit",
-                        "nous": "prévoyons",
-                        "vous": "prévoyez",
-                        "ils/elles": "prévoient"
-                    }
-                },
-                {
-                    "infinitive": "pourvoir",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "снабжать, обеспечивать",
-                    "present_tense": {
-                        "je": "pourvois",
-                        "tu": "pourvois",
-                        "il/elle": "pourvoit",
-                        "nous": "pourvoyons",
-                        "vous": "pourvoyez",
-                        "ils/elles": "pourvoient"
-                    }
-                },
-                {
-                    "infinitive": "émouvoir",
-                    "verbes_du_type": "mouvoir, promouvoir",
-                    "rank": 255,
-                    "translation": "волновать, трогать",
-                    "present_tense": {
-                        "je": "émeus",
-                        "tu": "émeus",
-                        "il/elle": "émeut",
-                        "nous": "émouvons",
-                        "vous": "émouvez",
-                        "ils/elles": "émeuvent"
-                    }
-                },
-                {
-                    "infinitive": "asseoir",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "усаживать",
-                    "present_tense": {
-                        "je": "assois",
-                        "tu": "assois",
-                        "il/elle": "assoit",
-                        "nous": "assoyons",
-                        "vous": "assoyez",
-                        "ils/elles": "assoient"
-                    }
-                },
-                {
-                    "infinitive": "pleuvoir",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "идти (о дожде)",
-                    "present_tense": {
-                        "je": " - ",
-                        "tu": " - ",
-                        "il/elle": "pleut",
-                        "nous": " - ",
-                        "vous": " - ",
-                        "ils/elles": " - "
-                    }
-                },
-                {
-                    "infinitive": "seoir",
-                    "verbes_du_type": "messeoir",
-                    "rank": 255,
-                    "translation": "подходить, быть к лицу",
-                    "present_tense": {
-                        "je": " - ",
-                        "tu": " - ",
-                        "il/elle": "sied",
-                        "nous": " - ",
-                        "vous": " - ",
-                        "ils/elles": "siéent"
-                    }
-                },
-                {
-                    "infinitive": "surseoir",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "откладывать, приостанавливать",
-                    "present_tense": {
-                        "je": "sursois",
-                        "tu": "sursois",
-                        "il/elle": "sursoit",
-                        "nous": "sursoyons",
-                        "vous": "sursoyez",
-                        "ils/elles": "sursoient"
-                    }
-                },
-                {
-                    "infinitive": "choir",
-                    "verbes_du_type": "échoir",
-                    "rank": 255,
-                    "translation": "падать",
-                    "present_tense": {
-                        "je": " - ",
-                        "tu": " - ",
-                        "il/elle": "choit",
-                        "nous": " - ",
-                        "vous": " - ",
-                        "ils/elles": "choient"
-                    }
-                },
-                {
-                    "infinitive": "échoir",
-                    "verbes_du_type": "choir",
-                    "rank": 255,
-                    "translation": "истекать (о сроке), выпадать на долю",
-                    "present_tense": {
-                        "je": " - ",
-                        "tu": " - ",
-                        "il/elle": "échoit",
-                        "nous": " - ",
-                        "vous": " - ",
-                        "ils/elles": "échoient"
-                    }
-                },
-                {
-                    "infinitive": "déchoir",
-                    "verbes_du_type": "choir, échoir",
-                    "rank": 255,
-                    "translation": "лишаться (прав), приходить в упадок",
-                    "present_tense": {
-                        "je": "déchois",
-                        "tu": "déchois",
-                        "il/elle": "déchoit",
-                        "nous": "déchoyons",
-                        "vous": "déchoyez",
-                        "ils/elles": "déchoient"
-                    }
-                },
-                {
-                    "infinitive": "extraire",
-                    "verbes_du_type": "abstraire, distraire, braire, soustraire, traire",
-                    "rank": 255,
-                    "translation": "извлекать, вынимать",
-                    "present_tense": {
-                        "je": "extrais",
-                        "tu": "extrais",
-                        "il/elle": "extrait",
-                        "nous": "extrayons",
-                        "vous": "extrayez",
-                        "ils/elles": "extraient"
-                    }
-                },
-                {
-                    "infinitive": "taire",
-                    "verbes_du_type": "plaire, complaire, déplaire",
-                    "rank": 255,
-                    "translation": "умалчивать, молчать",
-                    "present_tense": {
-                        "je": "tais",
-                        "tu": "tais",
-                        "il/elle": "tait",
-                        "nous": "taisons",
-                        "vous": "taisez",
-                        "ils/elles": "taisent"
-                    }
-                },
-                {
                     "infinitive": "plaire",
                     "verbes_du_type": "complaire, déplaire",
-                    "rank": 255,
+                    "rank": 41,
+                    "justification": "Utilisé dans des contextes sociaux ou esthétiques (plaire à quelqu’un).",
                     "translation": "нравиться, доставлять удовольствие",
                     "present_tense": {
                         "je": "plais",
@@ -1005,23 +801,10 @@
                     }
                 },
                 {
-                    "infinitive": "croire",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "верить",
-                    "present_tense": {
-                        "je": "crois",
-                        "tu": "crois",
-                        "il/elle": "croit",
-                        "nous": "croyons",
-                        "vous": "croyez",
-                        "ils/elles": "croient"
-                    }
-                },
-                {
                     "infinitive": "conduire",
                     "verbes_du_type": "construire, cuire, déduire, détruire, éconduire, enduire, induire, instruire, introduire, luire, nuire, produire, réduire, reluire, reproduire, séduire, traduire",
-                    "rank": 255,
+                    "rank": 42,
+                    "justification": "Fréquent dans les contextes de transport ou de direction.",
                     "translation": "водить, управлять",
                     "present_tense": {
                         "je": "conduis",
@@ -1035,7 +818,8 @@
                 {
                     "infinitive": "rire",
                     "verbes_du_type": "sourire",
-                    "rank": 255,
+                    "rank": 43,
+                    "justification": "Commun dans les interactions sociales.",
                     "translation": "смеяться",
                     "present_tense": {
                         "je": "ris",
@@ -1047,79 +831,55 @@
                     }
                 },
                 {
-                    "infinitive": "interdire",
-                    "verbes_du_type": "contredire, dédire, médire, prédire",
-                    "rank": 255,
-                    "translation": "запрещать",
+                    "infinitive": "acquérir",
+                    "verbes_du_type": "conquérir, enquérir, quérir, reconquérir, requérir",
+                    "rank": 44,
+                    "justification": "Moins fréquent, utilisé dans des contextes formels ou d’apprentissage.",
+                    "translation": "приобретать",
                     "present_tense": {
-                        "je": "interdis",
-                        "tu": "interdis",
-                        "il/elle": "interdit",
-                        "nous": "interdisons",
-                        "vous": "interdisez",
-                        "ils/elles": "interdisent"
+                        "je": "acquiers",
+                        "tu": "acquiers",
+                        "il/elle": "acquiert",
+                        "nous": "acquérons",
+                        "vous": "acquérez",
+                        "ils/elles": "acquièrent"
                     }
                 },
                 {
-                    "infinitive": "maudire",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "проклинать",
+                    "infinitive": "résoudre",
+                    "verbes_du_type": "absoudre, dissoudre",
+                    "rank": 45,
+                    "justification": "Utilisé dans des contextes techniques ou intellectuels.",
+                    "translation": "решать",
                     "present_tense": {
-                        "je": "maudis",
-                        "tu": "maudis",
-                        "il/elle": "maudit",
-                        "nous": "maudissons",
-                        "vous": "maudissez",
-                        "ils/elles": "maudissent"
+                        "je": "résous",
+                        "tu": "résous",
+                        "il/elle": "résout",
+                        "nous": "résolvons",
+                        "vous": "résolvez",
+                        "ils/elles": "résolvent"
                     }
                 },
                 {
-                    "infinitive": "suffire",
-                    "verbes_du_type": "",
-                    "rank": 255,
-                    "translation": "хватать, быть достаточным",
+                    "infinitive": "battre",
+                    "verbes_du_type": "abattre, combattre, débattre, rabattre, rebattre, contrefoutre, ébattre, foutre",
+                    "rank": 46,
+                    "justification": "Fréquent dans des contextes physiques (battre un record) ou figurés.",
+                    "translation": "бить, колотить",
                     "present_tense": {
-                        "je": "suffis",
-                        "tu": "suffis",
-                        "il/elle": "suffit",
-                        "nous": "suffisons",
-                        "vous": "suffisez",
-                        "ils/elles": "suffisent"
-                    }
-                },
-                {
-                    "infinitive": "confire",
-                    "verbes_du_type": "circoncire, frire",
-                    "rank": 255,
-                    "translation": "консервировать (в сахаре), засахаривать",
-                    "present_tense": {
-                        "je": "confis",
-                        "tu": "confis",
-                        "il/elle": "confit",
-                        "nous": "confisons",
-                        "vous": "confisez",
-                        "ils/elles": "confisent"
-                    }
-                },
-                {
-                    "infinitive": "répandre",
-                    "verbes_du_type": "épandre",
-                    "rank": 255,
-                    "translation": "распространять, разливать",
-                    "present_tense": {
-                        "je": "répands",
-                        "tu": "répands",
-                        "il/elle": "répand",
-                        "nous": "répandons",
-                        "vous": "répandez",
-                        "ils/elles": "répandent"
+                        "je": "bats",
+                        "tu": "bats",
+                        "il/elle": "bat",
+                        "nous": "battons",
+                        "vous": "battez",
+                        "ils/elles": "battent"
                     }
                 },
                 {
                     "infinitive": "peindre",
                     "verbes_du_type": "astreindre, atteindre, ceindre, dépeindre, déteindre, empreindre, enfreindre, éteindre, étreindre, feindre, geindre, repeindre, restreindre, teindre",
-                    "rank": 255,
+                    "rank": 47,
+                    "justification": "Moins courant, utilisé dans des contextes artistiques ou descriptifs.",
                     "translation": "рисовать, красить",
                     "present_tense": {
                         "je": "peins",
@@ -1133,7 +893,8 @@
                 {
                     "infinitive": "craindre",
                     "verbes_du_type": "contraindre, plaindre",
-                    "rank": 255,
+                    "rank": 48,
+                    "justification": "Utilisé pour exprimer la peur, mais moins fréquent dans la langue moderne.",
                     "translation": "бояться",
                     "present_tense": {
                         "je": "crains",
@@ -1147,7 +908,8 @@
                 {
                     "infinitive": "joindre",
                     "verbes_du_type": "adjoindre, conjoindre, disjoindre, enjoindre, oindre, poindre, rejoindre",
-                    "rank": 255,
+                    "rank": 49,
+                    "justification": "Utilisé dans des contextes comme 'joindre quelqu’un' ou 'joindre des documents'.",
                     "translation": "соединять, присоединять",
                     "present_tense": {
                         "je": "joins",
@@ -1159,51 +921,10 @@
                     }
                 },
                 {
-                    "infinitive": "coudre",
-                    "verbes_du_type": "découdre, recoudre",
-                    "rank": 255,
-                    "translation": "шить",
-                    "present_tense": {
-                        "je": "couds",
-                        "tu": "couds",
-                        "il/elle": "coud",
-                        "nous": "cousons",
-                        "vous": "cousez",
-                        "ils/elles": "cousent"
-                    }
-                },
-                {
-                    "infinitive": "moudre",
-                    "verbes_du_type": "émoudre, remoudre",
-                    "rank": 255,
-                    "translation": "молоть",
-                    "present_tense": {
-                        "je": "mouds",
-                        "tu": "mouds",
-                        "il/elle": "moud",
-                        "nous": "moulons",
-                        "vous": "moulez",
-                        "ils/elles": "moulent"
-                    }
-                },
-                {
-                    "infinitive": "résoudre",
-                    "verbes_du_type": "absoudre, dissoudre",
-                    "rank": 255,
-                    "translation": "решать",
-                    "present_tense": {
-                        "je": "résous",
-                        "tu": "résous",
-                        "il/elle": "résout",
-                        "nous": "résolvons",
-                        "vous": "résolvez",
-                        "ils/elles": "résolvent"
-                    }
-                },
-                {
                     "infinitive": "rompre",
                     "verbes_du_type": "",
-                    "rank": 255,
+                    "rank": 50,
+                    "justification": "Moins fréquent, utilisé dans des contextes de rupture (relation, contrat).",
                     "translation": "ломать, разрывать",
                     "present_tense": {
                         "je": "romps",
@@ -1215,23 +936,10 @@
                     }
                 },
                 {
-                    "infinitive": "battre",
-                    "verbes_du_type": "abattre, combattre, débattre, rabattre, rebattre, contrefoutre, ébattre, foutre",
-                    "rank": 255,
-                    "translation": "бить, колотить",
-                    "present_tense": {
-                        "je": "bats",
-                        "tu": "bats",
-                        "il/elle": "bat",
-                        "nous": "battons",
-                        "vous": "battez",
-                        "ils/elles": "battent"
-                    }
-                },
-                {
                     "infinitive": "vaincre",
                     "verbes_du_type": "convaincre",
-                    "rank": 255,
+                    "rank": 51,
+                    "justification": "Rare dans l’usage courant, plus littéraire ou formel.",
                     "translation": "побеждать, преодолевать",
                     "present_tense": {
                         "je": "vaincs",
@@ -1243,23 +951,25 @@
                     }
                 },
                 {
-                    "infinitive": "repaître",
-                    "verbes_du_type": "paître",
-                    "rank": 255,
-                    "translation": "питаться, насыщаться",
+                    "infinitive": "prévoir",
+                    "verbes_du_type": "",
+                    "rank": 52,
+                    "justification": "Utilisé dans des contextes de planification, mais moins fréquent.",
+                    "translation": "ожидать",
                     "present_tense": {
-                        "je": "repais",
-                        "tu": "repais",
-                        "il/elle": "repaît",
-                        "nous": "repaissons",
-                        "vous": "repaissez",
-                        "ils/elles": "repaissent"
+                        "je": "prévois",
+                        "tu": "prévois",
+                        "il/elle": "prévoit",
+                        "nous": "prévoyons",
+                        "vous": "prévoyez",
+                        "ils/elles": "prévoient"
                     }
                 },
                 {
                     "infinitive": "croître",
                     "verbes_du_type": "décroître, accroître, recroître",
-                    "rank": 255,
+                    "rank": 53,
+                    "justification": "Moins courant, utilisé dans des contextes économiques ou biologiques.",
                     "translation": "расти, увеличиваться",
                     "present_tense": {
                         "je": "croîs",
@@ -1273,7 +983,8 @@
                 {
                     "infinitive": "conclure",
                     "verbes_du_type": "exclure, inclure, occlure",
-                    "rank": 255,
+                    "rank": 54,
+                    "justification": "Utilisé dans des contextes formels (conclure un accord).",
                     "translation": "заключать, делать вывод",
                     "present_tense": {
                         "je": "conclus",
@@ -1285,23 +996,250 @@
                     }
                 },
                 {
-                    "infinitive": "suivre",
-                    "verbes_du_type": "poursuivre, s'ensuivre, ensuivre",
-                    "rank": 40,
-                    "translation": "следовать, идти за",
+                    "infinitive": "fuir",
+                    "verbes_du_type": "enfuir",
+                    "rank": 56,
+                    "justification": "Utilisé dans des contextes dramatiques ou figurés, moins courant.",
+                    "translation": "мчаться",
                     "present_tense": {
-                        "je": "suis",
-                        "tu": "suis",
-                        "il/elle": "suit",
-                        "nous": "suivons",
-                        "vous": "suivez",
-                        "ils/elles": "suivent"
+                        "je": "fuis",
+                        "tu": "fuis",
+                        "il/elle": "fuit",
+                        "nous": "fuyons",
+                        "vous": "fuyez",
+                        "ils/elles": "fuient"
+                    }
+                },
+                {
+                    "infinitive": "pourvoir",
+                    "verbes_du_type": "",
+                    "rank": 57,
+                    "justification": "Rare, utilisé dans des contextes administratifs ou formels.",
+                    "translation": "снабжать, обеспечивать",
+                    "present_tense": {
+                        "je": "pourvois",
+                        "tu": "pourvois",
+                        "il/elle": "pourvoit",
+                        "nous": "pourvoyons",
+                        "vous": "pourvoyez",
+                        "ils/elles": "pourvoient"
+                    }
+                },
+                {
+                    "infinitive": "bouillir",
+                    "verbes_du_type": "",
+                    "rank": 58,
+                    "justification": "Peu fréquent, limité aux contextes culinaires ou métaphoriques.",
+                    "translation": "кипятить",
+                    "present_tense": {
+                        "je": "bous",
+                        "tu": "bous",
+                        "il/elle": "bout",
+                        "nous": "bouillîmes",
+                        "vous": "bouillîtes",
+                        "ils/elles": "bouillirent"
+                    }
+                },
+                {
+                    "infinitive": "cueillir",
+                    "verbes_du_type": "accueillir, recueillir",
+                    "rank": 59,
+                    "justification": "Rare, utilisé dans des contextes poétiques ou agricoles.",
+                    "translation": "выбирать",
+                    "present_tense": {
+                        "je": "cueille",
+                        "tu": "cueilles",
+                        "il/elle": "cueille",
+                        "nous": "cueillons",
+                        "vous": "cueillez",
+                        "ils/elles": "cueillent"
+                    }
+                },
+                {
+                    "infinitive": "taire",
+                    "verbes_du_type": "plaire, complaire, déplaire",
+                    "rank": 60,
+                    "justification": "Moins courant, utilisé pour 'se taire' ou dans des contextes littéraires.",
+                    "translation": "умалчивать, молчать",
+                    "present_tense": {
+                        "je": "tais",
+                        "tu": "tais",
+                        "il/elle": "tait",
+                        "nous": "taisons",
+                        "vous": "taisez",
+                        "ils/elles": "taisent"
+                    }
+                },
+                {
+                    "infinitive": "interdire",
+                    "verbes_du_type": "contredire, dédire, médire, prédire",
+                    "rank": 62,
+                    "justification": "Utilisé dans des contextes d’autorité, mais moins courant.",
+                    "translation": "запрещать",
+                    "present_tense": {
+                        "je": "interdis",
+                        "tu": "interdis",
+                        "il/elle": "interdit",
+                        "nous": "interdisons",
+                        "vous": "interdisez",
+                        "ils/elles": "interdisent"
+                    }
+                },
+                {
+                    "infinitive": "maudire",
+                    "verbes_du_type": "",
+                    "rank": 63,
+                    "justification": "Rare, utilisé dans des contextes émotionnels ou littéraires.",
+                    "translation": "проклинать",
+                    "present_tense": {
+                        "je": "maudis",
+                        "tu": "maudis",
+                        "il/elle": "maudit",
+                        "nous": "maudissons",
+                        "vous": "maudissez",
+                        "ils/elles": "maudissent"
+                    }
+                },
+                {
+                    "infinitive": "suffire",
+                    "verbes_du_type": "",
+                    "rank": 64,
+                    "justification": "Moins fréquent, utilisé dans des contextes comme 'il suffit de'.",
+                    "translation": "хватать, быть достаточным",
+                    "present_tense": {
+                        "je": "suffis",
+                        "tu": "suffis",
+                        "il/elle": "suffit",
+                        "nous": "suffisons",
+                        "vous": "suffisez",
+                        "ils/elles": "suffisent"
+                    }
+                },
+                {
+                    "infinitive": "répandre",
+                    "verbes_du_type": "épandre",
+                    "rank": 65,
+                    "justification": "Rare, utilisé dans des contextes spécifiques (répandre une rumeur).",
+                    "translation": "распространять, разливать",
+                    "present_tense": {
+                        "je": "répands",
+                        "tu": "répands",
+                        "il/elle": "répand",
+                        "nous": "répandons",
+                        "vous": "répandez",
+                        "ils/elles": "répandent"
+                    }
+                },
+                {
+                    "infinitive": "coudre",
+                    "verbes_du_type": "découdre, recoudre",
+                    "rank": 66,
+                    "justification": "Peu fréquent, limité aux contextes de couture.",
+                    "translation": "шить",
+                    "present_tense": {
+                        "je": "couds",
+                        "tu": "couds",
+                        "il/elle": "coud",
+                        "nous": "cousons",
+                        "vous": "cousez",
+                        "ils/elles": "cousent"
+                    }
+                },
+                {
+                    "infinitive": "moudre",
+                    "verbes_du_type": "émoudre, remoudre",
+                    "rank": 67,
+                    "justification": "Rare, utilisé dans des contextes techniques (moudre du grain).",
+                    "translation": "молоть",
+                    "present_tense": {
+                        "je": "mouds",
+                        "tu": "mouds",
+                        "il/elle": "moud",
+                        "nous": "moulons",
+                        "vous": "moulez",
+                        "ils/elles": "moulent"
+                    }
+                },
+                {
+                    "infinitive": "confire",
+                    "verbes_du_type": "circoncire, frire",
+                    "rank": 68,
+                    "justification": "Très rare, utilisé dans des contextes culinaires ou archaïques.",
+                    "translation": "консервировать (в сахаре), засахаривать",
+                    "present_tense": {
+                        "je": "confis",
+                        "tu": "confis",
+                        "il/elle": "confit",
+                        "nous": "confisons",
+                        "vous": "confisez",
+                        "ils/elles": "confisent"
+                    }
+                },
+                {
+                    "infinitive": "émouvoir",
+                    "verbes_du_type": "mouvoir, promouvoir",
+                    "rank": 73,
+                    "justification": "Rare, utilisé dans des contextes littéraires ou émotionnels.",
+                    "translation": "волновать, трогать",
+                    "present_tense": {
+                        "je": "émeus",
+                        "tu": "émeus",
+                        "il/elle": "émeut",
+                        "nous": "émouvons",
+                        "vous": "émouvez",
+                        "ils/elles": "émeuvent"
+                    }
+                },
+                {
+                    "infinitive": "asseoir",
+                    "verbes_du_type": "",
+                    "rank": 74,
+                    "justification": "Moins courant, souvent remplacé par 's’asseoir' dans l’usage courant.",
+                    "translation": "усаживать",
+                    "present_tense": {
+                        "je": "assois",
+                        "tu": "assois",
+                        "il/elle": "assoit",
+                        "nous": "assoyons",
+                        "vous": "assoyez",
+                        "ils/elles": "assoient"
+                    }
+                },
+                {
+                    "infinitive": "pleuvoir",
+                    "verbes_du_type": "",
+                    "rank": 75,
+                    "justification": "Utilisé dans des contextes météorologiques, mais impersonnel et moins fréquent.",
+                    "translation": "идти (о дожде)",
+                    "present_tense": {
+                        "je": " - ",
+                        "tu": " - ",
+                        "il/elle": "pleut",
+                        "nous": " - ",
+                        "vous": " - ",
+                        "ils/elles": " - "
+                    }
+                },
+                {
+                    "infinitive": "extraire",
+                    "verbes_du_type": "abstraire, distraire, braire, soustraire, traire",
+                    "rank": 76,
+                    "justification": "Rare, utilisé dans des contextes techniques ou littéraires.",
+                    "translation": "извлекать, вынимать",
+                    "present_tense": {
+                        "je": "extrais",
+                        "tu": "extrais",
+                        "il/elle": "extrait",
+                        "nous": "extrayons",
+                        "vous": "extrayez",
+                        "ils/elles": "extraient"
                     }
                 },
                 {
                     "infinitive": "clore",
                     "verbes_du_type": "déclore, éclore, enclore, forclore",
-                    "rank": 255,
+                    "rank": 77,
+                    "justification": "Très rare, utilisé dans des contextes formels (clore un débat).",
                     "translation": "закрывать, завершать",
                     "present_tense": {
                         "je": "clos",
@@ -1310,6 +1248,156 @@
                         "nous": " - ",
                         "vous": " - ",
                         "ils/elles": "closent"
+                    }
+                },
+                {
+                    "infinitive": "seoir",
+                    "verbes_du_type": "messeoir",
+                    "rank": 78,
+                    "justification": "Archaïque, presque inutilisé dans la langue moderne.",
+                    "translation": "подходить, быть к лицу",
+                    "present_tense": {
+                        "je": " - ",
+                        "tu": " - ",
+                        "il/elle": "sied",
+                        "nous": " - ",
+                        "vous": " - ",
+                        "ils/elles": "siéent"
+                    }
+                },
+                {
+                    "infinitive": "surseoir",
+                    "verbes_du_type": "",
+                    "rank": 79,
+                    "justification": "Très rare, utilisé dans des contextes juridiques.",
+                    "translation": "откладывать, приостанавливать",
+                    "present_tense": {
+                        "je": "sursois",
+                        "tu": "sursois",
+                        "il/elle": "sursoit",
+                        "nous": "sursoyons",
+                        "vous": "sursoyez",
+                        "ils/elles": "sursoient"
+                    }
+                },
+                {
+                    "infinitive": "gésir",
+                    "verbes_du_type": "",
+                    "rank": 80,
+                    "justification": "Archaïque, utilisé dans des contextes littéraires ou funéraires.",
+                    "translation": "лечь",
+                    "present_tense": {
+                        "je": "gis",
+                        "tu": "gis",
+                        "il/elle": "gît",
+                        "nous": "gisons",
+                        "vous": "gisez",
+                        "ils/elles": "gisent"
+                    }
+                },
+                {
+                    "infinitive": "ouïr",
+                    "verbes_du_type": "",
+                    "rank": 81,
+                    "justification": "Archaïque, remplacé par 'entendre' dans l’usage moderne.",
+                    "translation": "слышать",
+                    "present_tense": {
+                        "je": "ois",
+                        "tu": "ois",
+                        "il/elle": "oit",
+                        "nous": "oyons",
+                        "vous": "oyez",
+                        "ils/elles": "oient"
+                    }
+                },
+                {
+                    "infinitive": "choir",
+                    "verbes_du_type": "échoir",
+                    "rank": 82,
+                    "justification": "Très rare, presque inutilisé sauf dans des textes anciens.",
+                    "translation": "падать",
+                    "present_tense": {
+                        "je": " - ",
+                        "tu": " - ",
+                        "il/elle": "choit",
+                        "nous": " - ",
+                        "vous": " - ",
+                        "ils/elles": "choient"
+                    }
+                },
+                {
+                    "infinitive": "échoir",
+                    "verbes_du_type": "choir",
+                    "rank": 83,
+                    "justification": "Rare, utilisé dans des contextes juridiques (échoir à quelqu’un).",
+                    "translation": "истекать (о сроке), выпадать на долю",
+                    "present_tense": {
+                        "je": " - ",
+                        "tu": " - ",
+                        "il/elle": "échoit",
+                        "nous": " - ",
+                        "vous": " - ",
+                        "ils/elles": "échoient"
+                    }
+                },
+                {
+                    "infinitive": "déchoir",
+                    "verbes_du_type": "choir, échoir",
+                    "rank": 84,
+                    "justification": "Très rare, utilisé dans des contextes de déchéance ou littéraires.",
+                    "translation": "лишаться (прав), приходить в упадок",
+                    "present_tense": {
+                        "je": "déchois",
+                        "tu": "déchois",
+                        "il/elle": "déchoit",
+                        "nous": "déchoyons",
+                        "vous": "déchoyez",
+                        "ils/elles": "déchoient"
+                    }
+                },
+                {
+                    "infinitive": "défaillir",
+                    "verbes_du_type": "assaillir, saillir, tressaillir",
+                    "rank": 85,
+                    "justification": "Archaïque, utilisé dans des contextes littéraires ou poétiques.",
+                    "translation": "потерпеть неудачу",
+                    "present_tense": {
+                        "je": "défaille",
+                        "tu": "défailles",
+                        "il/elle": "défaille",
+                        "nous": "défaillons",
+                        "vous": "défaillez",
+                        "ils/elles": "défaillent"
+                    }
+                },
+                {
+                    "infinitive": "faillir",
+                    "verbes_du_type": "",
+                    "rank": 86,
+                    "justification": "Rare, utilisé dans des contextes comme 'faillir faire quelque chose'.",
+                    "translation": "обанкротиться",
+                    "present_tense": {
+                        "je": "faux",
+                        "tu": "faux",
+                        "il/elle": "faut",
+                        "nous": "faillons",
+                        "vous": "faillez",
+                        "ils/elles": "faillent"
+                    }
+                },
+                {
+                    "infinitive": "repaître",
+                    "verbes_du_type": "paître",
+                    "rank": 87,
+                    "justification": "Très rare, utilisé dans des contextes littéraires ou archaïques.",
+                    "translation": "питаться, насыщаться",
+                    "present_tense": {
+                        "je": "repais",
+                        "tu": "repais",
+                        "il/elle": "repaît",
+                        "nous": "repaissons",
+                        "vous": "repaissez",
+                        "ils/elles": "repaissent"
                     }
                 }
             ]

@@ -636,21 +636,6 @@
                     }
                 },
                 {
-                    "infinitive": "croire",
-                    "verbes_du_type": "",
-                    "rank": 14,
-                    "justification": "Commun pour exprimer une opinion ou une croyance.",
-                    "translation": "верить",
-                    "present_tense": {
-                        "je": "crois",
-                        "tu": "crois",
-                        "il/elle": "croit",
-                        "nous": "croyons",
-                        "vous": "croyez",
-                        "ils/elles": "croient"
-                    }
-                },
-                {
                     "infinitive": "vivre",
                     "verbes_du_type": "revivre, survivre",
                     "rank": 17,

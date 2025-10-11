@@ -433,11 +433,14 @@ Elapsed time: 12152 ms, HeapAlloc = 8966.899 MB, Sys = 12248.287 MB<br>
                 Let’s play with data structures
               </h3>
 
-              <p>When we get data from a table, the order of columns is always defined by the database. Then we can use
-                2 coordinated slices — columns and values. Then we can refuse a map type and use slice.</p>
+              <p>When fetching data from a SQL table, the order of columns is always defined by the database —
+                deterministic and consistent across rows. This means we can skip the overhead of maps and instead rely
+                on two coordinated slices: one holding column names, the other holding their corresponding values.
+                It’s simpler, faster, and perfectly aligned with the way the database delivers data.</p>
 
-              <p>The next trick — we will request data as byte slices and list of columns will fetch as list of
-                ColumnTypes — it will help us in future.<br>
+              <p>The next refinement is to request values as byte slices and retrieve column metadata via <b>ColumnTypes</b>.
+                This approach gives us type information up front while keeping data handling lightweight —
+                an efficient foundation for streaming, type conversion, or dynamic encoding later on.<br>
               </p>
               <div class="highlight js-code-highlight">
                 <pre class="highlight go"><code><span class="n">columns</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">rs</span><span class="o">.</span><span class="n">ColumnTypes</span><span class="p">()</span>

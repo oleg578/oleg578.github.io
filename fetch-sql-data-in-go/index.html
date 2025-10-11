@@ -382,14 +382,12 @@ Elapsed time: 12631 ms, HeapAlloc = 5400.725 MB, Sys = 7099.447 MB<br>
 
 
                             <p><strong><em>Note:</em></strong><br>
-                                <em>You may want to pay attention to the function assignCellValue — its purpose is to
-                                    pre-assign a type
-                                    to column values. Simple trick — this function tells the JSON encoder which values
-                                    ​​to accept as
-                                    non-numeric.</em><br>
+                                <em>You may want to pay attention to the function assign CellValue — it's purpose is to
+                                    pre-assign a type to column values. Simple trick —
+                                    this function tells the JSON encoder which values to accept as non-numeric.</em><br>
                                 Benchmark:<br>
-                                <code>cpu: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz<br>
-BenchmarkRow2Map<br>
+                                <code>cpu: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+                                    <br>BenchmarkRow2Map<br>
 BenchmarkRow2Map-8     7376358        159.0 ns/op      336 B/op        2 allocs/op</code>
                             </p>
 

@@ -95,14 +95,6 @@
             <div class="space-y-4">
               <h1 class="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl">Three ways to fetch SQL data in Go
               </h1>
-              <p class="text-lg text-slate-300">In this article, we explore three approaches to fetching data from
-                SQL databases in Go.
-                We’ll start with the conventional method based on JSON marshaling,
-                move on to a more flexible dynamic approach using maps, and finish with an
-                optimized technique that minimizes overhead and maximizes performance.
-                Each method reveals a different balance between simplicity, flexibility, and efficiency —
-                essential trade-offs for any Go developer working with databases.
-              </p>
             </div>
             <div
               class="prose prose-invert prose-headings:scroll-mt-24 prose-headings:font-semibold prose-a:text-brand prose-a:no-underline hover:prose-a:underline max-w-none"
@@ -112,10 +104,15 @@
                 </a>
                 Introduction
               </h2>
-
-              <p>In this article, we explore three different approaches to fetching data from SQL databases in Golang:
-                the standard method using JSON marshaling, a dynamic approach using maps, and an optimized method that
-                avoids unnecessary overhead.</p>
+              <p>
+                In this article, we explore three approaches to fetching data from
+                SQL databases in Go.
+                We’ll start with the conventional method based on JSON marshaling,
+                move on to a more flexible dynamic approach using maps, and finish with an
+                optimized technique that minimizes overhead and maximizes performance.
+                Each method reveals a different balance between simplicity, flexibility, and efficiency —
+                essential trade-offs for any Go developer working with databases.
+              </p>
 
               <p>In my practice, there were very frequent cases where I had to retrieve data from a database with an
                 unknown structure beforehand. This often happens in the e-commerce industry.</p>

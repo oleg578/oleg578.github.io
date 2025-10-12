@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon-CZmGzRYx.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32-DP1DxnU_.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16-Kadj5d8W.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="icon" type="image/x-icon" href="./assets/favicon-BMb_UXWT.ico">
-        <link rel="icon" type="image/png" sizes="192x192" href="./assets/android-chrome-192x192-BpdikjYN.png">
-        <link rel="icon" type="image/png" sizes="512x512" href="./assets/android-chrome-512x512-DOTu-18w.png">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css"
-            referrerpolicy="no-referrer" />
-        <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            brand: '#38bdf8',
-                            ink: '#0f172a'
-                        }
-                    }
-                }
-            };
-        </script>
-        <title>Nahornyi Oleh</title>
-        <script type="module" crossorigin src="./assets/index-CFBjKLKn.js"></script>
-        <link rel="stylesheet" crossorigin href="./assets/index-DNBYTDzq.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon-CZmGzRYx.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32-DP1DxnU_.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16-Kadj5d8W.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon-BMb_UXWT.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/android-chrome-192x192-BpdikjYN.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./assets/android-chrome-512x512-DOTu-18w.png">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css"
+      referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#38bdf8',
+              ink: '#0f172a'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      #article-body h2 > a,
+      #article-body h2 > a:visited,
+      #article-body h3 > a,
+      #article-body h3 > a:visited {
+        color: #f8fafc !important;
+        text-decoration: none !important;
+      }
 
-    <body class="min-h-screen bg-slate-950 font-sans text-slate-100">
+      #article-body h2 > a:hover,
+      #article-body h2 > a:focus,
+      #article-body h3 > a:hover,
+      #article-body h3 > a:focus {
+        color: #f8fafc !important;
+        text-decoration: none !important;
+      }
+
+      #article-body .ltag_gist-liquid-tag table caption,
+      #article-body .ltag_gist-liquid-tag table thead th,
+      #article-body .ltag_gist-liquid-tag table th {
+        color: #0f172a !important;
+      }
+    </style>
+    <title>Nahornyi Oleh</title>
+  </head>
+
+<body class="min-h-screen bg-slate-950 font-sans text-slate-100">
         <div class="min-h-screen bg-gradient-to-br from-indigo-700 via-fuchsia-950 to-black/90">
             <header class="sticky top-0 z-50 border-b border-slate-800/60 bg-slate-950/70 backdrop-blur">
                 <div class="mx-auto flex max-w-full flex-wrap items-center justify-between gap-4 px-6 py-4">
@@ -72,7 +93,7 @@
                     </div>
                 </div>
             </header>
-            <main id="main-content" class="mx-auto max-w-4xl px-6 py-12">
+            <main id="main-content" class="mx-auto max-w-6xl px-6 py-12">
                 <article
                     class="overflow-hidden rounded-3xl border border-slate-800/60 bg-slate-950/70 shadow-2xl backdrop-blur">
                     <div class="relative">
@@ -101,11 +122,7 @@
                         </div>
                         <div class="prose prose-invert prose-headings:scroll-mt-24 prose-headings:font-semibold prose-a:text-brand prose-a:no-underline hover:prose-a:underline max-w-none"
                             id="article-body">
-                            <h2>
-                                <a name="introduction" href="#introduction" title="Introduction">
-                                </a>
-                                Introduction
-                            </h2>
+                            <h2 id="introduction" title="Introduction"><a href="#introduction">Introduction</a></h2>
                             <p>
                                 In this article, we explore three approaches to fetching data from
                                 SQL databases in Go.
@@ -128,11 +145,7 @@
                                 <a href="https://github.com/oleg578/dbf" target="_blank"
                                     rel="noopener noreferrer">https://github.com/oleg578/dbf</a>
                             </p>
-                            <h2>
-                                <a name="data-preparing" href="#data-preparing" title="Data preparing">
-                                </a>
-                                Data preparing
-                            </h2>
+                            <h2 id="data-preparing" title="Data preparing"><a href="#data-preparing">Data preparing</a></h2>
                             <p>
                                 For demonstration purposes, we’ll use MariaDB, though the examples apply equally well to
                                 MySQL or any other SQL-compatible database. The focus is on the Go code and data-handling
@@ -145,11 +158,7 @@
                             <p>All examples are tested on Ubuntu 24.04.1 LTS (Noble Numbat) with 11th Gen Intel Core
                                 i5–1135G7 and
                                 16GiB RAM.</p>
-                            <h2>
-                                <a name="standard-way" href="#standard-way" title="Standard way">
-                                </a>
-                                Standard way
-                            </h2>
+                            <h2 id="standard-way" title="Standard way"><a href="#standard-way">Standard way</a></h2>
 
                             <p>The standard way is trivial — we fetch rows from database into array and then Marshal it
                                 into JSON
@@ -220,11 +229,7 @@ Elapsed time: 12631 ms, HeapAlloc = 5400.725 MB, Sys = 7099.447 MB<br>
 10000000 records read</code></p>
 
                             <p>Let’s just remember this as a starting point.</p>
-                            <h2>
-                                <a name="using-map-way" href="#using-map-way" title="Using map way">
-                                </a>
-                                Using map way
-                            </h2>
+                            <h2 id="using-map-way" title="Using map way"><a href="#using-map-way">Using map way</a></h2>
 
                             <p>Next we consider fetching unknown list of columns — like “SELECT * FROM …”.<br>
                                 The sequence of actions is simple.<br>
@@ -463,11 +468,7 @@ Elapsed time: 12152 ms, HeapAlloc = 8966.899 MB, Sys = 12248.287 MB<br>
                                 <a href="https://github.com/oleg578/dbf/tree/mapping" target="_blank"
                                     rel="noopener noreferrer">https://github.com/oleg578/dbf/tree/mapping</a>
                             </p>
-                            <h2>
-                                <a name="what-can-we-improve" href="#what-can-we-improve" title="What can we improve?">
-                                </a>
-                                What can we improve?
-                            </h2>
+                            <h2 id="what-can-we-improve" title="What can we improve?"><a href="#what-can-we-improve">What can we improve?</a></h2>
 
                             <p>Let’s look at the weak points in our algorithm of actions when we use maps.</p>
 
@@ -476,18 +477,11 @@ Elapsed time: 12152 ms, HeapAlloc = 8966.899 MB, Sys = 12248.287 MB<br>
                                 resources and processor time;<br>
                                 And another too expensive operation — JSON marshaling the final slice which can be very
                                 big.</p>
-                            <h2>
-                                <a name="its-time-to-think-about-improvement"
-                                    href="#its-time-to-think-about-improvement"
-                                    title="It's time to think about improvement">
-                                </a>
-                                It’s time to think about improvement
+                            <h2 id="its-time-to-think-about-improvement" title="It's time to think about improvement">
+                                <a href="#its-time-to-think-about-improvement">It’s time to think about improvement</a>
                             </h2>
-                            <h3>
-                                <a name="lets-play-with-data-structures" href="#lets-play-with-data-structures"
-                                    title="Let’s play with data structures">
-                                </a>
-                                Let’s play with data structures
+                            <h3 id="lets-play-with-data-structures" title="Let’s play with data structures">
+                                <a href="#lets-play-with-data-structures">Let’s play with data structures</a>
                             </h3>
 
                             <p>When fetching data from a SQL table, the order of columns is always defined by the
@@ -738,11 +732,8 @@ Elapsed time: 12152 ms, HeapAlloc = 8966.899 MB, Sys = 12248.287 MB<br>
 BenchmarkRow2Json<br>
 BenchmarkRow2Json-8     2881545        385.3 ns/op      440 B/op        9 allocs/op</code>
                             </p>
-                            <h3>
-                                <a name="use-unix-way-to-output" href="#use-unix-way-to-output"
-                                    title="Use UNIX way to output">
-                                </a>
-                                Use UNIX way to output
+                            <h3 id="use-unix-way-to-output" title="Use UNIX way to output">
+                                <a href="#use-unix-way-to-output">Use UNIX way to output</a>
                             </h3>
 
                             <p>We will use UNIX way of output of our program — i.e. we will not create an output slice —
@@ -858,11 +849,7 @@ Elapsed time: 11894 ms, HeapAlloc = 2.436 MB, Sys = 11.710 MB<br>
                                 <li>Memory consumption — 11.710 MB instead 7099.447 MB.
                                     So, up to 10 percent faster and 600 times less memory consumption.</li>
                             </ul>
-                            <h2>
-                                <a name="conclusion" href="#conclusion" title="Conclusion">
-                                </a>
-                                Conclusion
-                            </h2>
+                            <h2 id="conclusion" title="Conclusion"><a href="#conclusion">Conclusion</a></h2>
 
                             <p>Let’s examine the broader scope of the tests.<br>
                                 Test comparison table (the length of result json file is 1.2Gb)<br>
@@ -893,6 +880,16 @@ Elapsed time: 11894 ms, HeapAlloc = 2.436 MB, Sys = 11.710 MB<br>
                             <p>The fast method (fetch data using slices) is not the fastest in benchmarks, but it’s
                                 fastest and the
                                 least gluttonous in real tests.</p>
+
+                            <p>Quantitatively, the slice-based approach delivers:</p>
+                            <ul>
+                                <li><strong>Performance comparison:</strong> Full 10M-row export finishes in 11.647&nbsp;s
+                                    versus 12.631&nbsp;s for the internal library method (Standard) (~7.8% faster).</li>
+                                <li><strong>Speed comparison:</strong> Throughput grows from 0.79&nbsp;million to
+                                    0.86&nbsp;million rows per second (~8.4% gain).</li>
+                                <li><strong>Memory consumption:</strong> Peak heap usage shrinks from 7.1&nbsp;GB to
+                                    11.7&nbsp;MB (≈99.8% reduction, about 600× smaller).</li>
+                            </ul>
 
                             <p>Analyzing the results, we can make two important conclusions, in my opinion :</p>
 

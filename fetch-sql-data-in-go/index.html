@@ -50,6 +50,107 @@
         color: #0f172a !important;
       }
     </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://oleh.dev/articles/three-ways-to-fetch-sql-data-in-go"
+        },
+        "inLanguage": "en",
+        "headline": "Three ways to fetch SQL data in Go",
+        "name": "Three ways to fetch SQL data in Go",
+        "description": "A practical comparison of three approaches to exporting SQL query results to JSON in Go, balancing simplicity, flexibility, and performance.",
+        "datePublished": "2024-10-02",
+        "dateModified": "2024-10-02",
+        "author": {
+          "@type": "Person",
+          "name": "Oleg Nahornyi",
+          "url": "https://github.com/oleg578"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Oleg Nahornyi"
+        },
+        "image": [
+          "https://oleh.dev/assets/img/cover-image.webp"
+        ],
+        "keywords": [
+          "Go",
+          "SQL",
+          "database",
+          "JSON",
+          "performance"
+        ],
+        "articleSection": [
+          "Standard way",
+          "Using map way",
+          "Slice-based streaming"
+        ],
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "Introduction",
+            "url": "#introduction",
+            "abstract": "Frames the challenge of exporting SQL query results to JSON in Go, outlining the need to balance simplicity, flexibility, and efficiency."
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Data preparing",
+            "url": "#data-preparing",
+            "abstract": "Describes the MariaDB test environment, dataset seeding, and hardware baseline used for the benchmarks."
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Standard way",
+            "url": "#standard-way",
+            "abstract": "Scans result rows into typed structs and marshals the slice to JSON; easy to implement but heavy on memory for large exports."
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Using map way",
+            "url": "#using-map-way",
+            "abstract": "Builds a map-per-row to cope with unpredictable schemas, offering flexibility at the cost of extra allocations and manual type handling."
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "It's time to think about improvement",
+            "url": "#its-time-to-think-about-improvement",
+            "abstract": "Introduces a slice-based data pipeline that leverages column metadata and manual JSON assembly to reduce allocations."
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Use UNIX way to output",
+            "url": "#use-unix-way-to-output",
+            "abstract": "Explains streaming rows directly to stdout with buffered writers to avoid building large in-memory payloads."
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Conclusion",
+            "url": "#conclusion",
+            "abstract": "Summarizes the trade-offs and highlights the slice-based streaming approach as the most memory-efficient option.",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Full export duration",
+                "value": "11.647 s (slice-based) vs 12.631 s (standard)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Throughput",
+                "value": "0.86 million rows/s (slice-based) vs 0.79 million rows/s (standard)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Peak heap usage",
+                "value": "11.7 MB (slice-based) vs 7.1 GB (standard)"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <title>Nahornyi Oleh</title>
   </head>
 

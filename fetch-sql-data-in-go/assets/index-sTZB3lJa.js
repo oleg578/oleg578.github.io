@@ -1,0 +1,8 @@
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const i of e)if(i.type==="childList")for(const s of i.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&r(s)}).observe(document,{childList:!0,subtree:!0});function o(e){const i={};return e.integrity&&(i.integrity=e.integrity),e.referrerPolicy&&(i.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?i.credentials="include":e.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function r(e){if(e.ep)return;e.ep=!0;const i=o(e);fetch(e.href,i)}})();class c extends HTMLElement{timerId=null;timeElem;constructor(){super(),this.timeElem=document.createElement("span");const t=this.attachShadow({mode:"open"}),o=document.createElement("style");o.textContent=`
+      span {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+      }
+    `,t.appendChild(o),t.appendChild(this.timeElem)}connectedCallback(){this.updateTime(),this.setTimer()}disconnectedCallback(){this.timerId!==null&&clearTimeout(this.timerId)}updateTime(){const t=new Date,o=t.toLocaleDateString([],{weekday:"long"}),r=t.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit",hour12:!0});this.timeElem.textContent=`${o}, ${r}`}setTimer(){const t=new Date,o=(60-t.getSeconds())*1e3-t.getMilliseconds();this.timerId=window.setTimeout(()=>{this.updateTime(),this.setTimer()},o)}}customElements.define("system-clock",c);

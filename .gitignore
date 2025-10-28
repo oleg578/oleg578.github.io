@@ -7,3 +7,4 @@ dist/
 *.log
 *.json
 !french_*.json
+!product_*.json

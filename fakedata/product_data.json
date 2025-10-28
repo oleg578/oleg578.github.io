@@ -1,0 +1,51 @@
+[
+  {
+    "SKU": "SKU-JEANS-001",
+    "Name": "Classic Denim Jeans",
+    "Description": "Straight-leg jeans in a deep indigo wash with light stretch for day-long comfort.",
+    "Price": 64.50,
+    "UmageURL": "https://nahornyioleh.be/fakedata/jeans.png"
+  },
+  {
+    "SKU": "SKU-SHIRT-001",
+    "Name": "Skyline Oxford Shirt",
+    "Description": "Crisp cotton oxford with a tailored silhouette and soft blue hue for easy layering.",
+    "Price": 48.00,
+    "UmageURL": "https://nahornyioleh.be/fakedata/shirt-blue.png"
+  },
+  {
+    "SKU": "SKU-SHIRT-002",
+    "Name": "Denim Utility Shirt",
+    "Description": "Washed denim shirt featuring double chest pockets and contrast stitching.",
+    "Price": 52.00,
+    "UmageURL": "https://nahornyioleh.be/fakedata/shirt-denim.png"
+  },
+  {
+    "SKU": "SKU-SHIRT-003",
+    "Name": "Crimson Linen Shirt",
+    "Description": "Lightweight linen button-down in a rich red tone with breathable weave.",
+    "Price": 44.50,
+    "UmageURL": "https://nahornyioleh.be/fakedata/shirt-red.png"
+  },
+  {
+    "SKU": "SKU-TEE-001",
+    "Name": "Heather Crew Tee",
+    "Description": "Soft tri-blend crewneck tee with a subtle heathered finish.",
+    "Price": 24.00,
+    "UmageURL": "https://nahornyioleh.be/fakedata/t-shirt-gray.png"
+  },
+  {
+    "SKU": "SKU-TEE-002",
+    "Name": "Forest Pocket Tee",
+    "Description": "Everyday crewneck tee in a forest green shade finished with a chest pocket.",
+    "Price": 22.50,
+    "UmageURL": "https://nahornyioleh.be/fakedata/t-shirt-green.png"
+  },
+  {
+    "SKU": "SKU-TEE-003",
+    "Name": "Sunburst Graphic Tee",
+    "Description": "Vibrant yellow tee with a relaxed fit and vintage sunburst graphic.",
+    "Price": 21.00,
+    "UmageURL": "https://nahornyioleh.be/fakedata/t-shirt-yellow.png"
+  }
+]

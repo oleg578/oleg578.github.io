@@ -1,6 +1,8 @@
 [
   {
     "SKU": "SKU-JEANS-001",
+    "Brand": "Denim Co.",
+    "URL": "https://nahornyioleh.be/fakeshop/SKU-JEANS-001",
     "Name": "Classic Denim Jeans",
     "Category": "Clothes",
     "Description": "Straight-leg jeans in a deep indigo wash with light stretch for day-long comfort.",
@@ -9,6 +11,8 @@
   },
   {
     "SKU": "SKU-SHIRT-001",
+    "Brand": "Denim Co.",
+    "URL": "https://nahornyioleh.be/fakeshop/SKU-SHIRT-001",
     "Name": "Skyline Oxford Shirt",
     "Category": "Clothes",
     "Description": "Crisp cotton oxford with a tailored silhouette and soft blue hue for easy layering.",
@@ -17,6 +21,8 @@
   },
   {
     "SKU": "SKU-SHIRT-002",
+    "Brand": "Denim Co.",
+    "URL": "https://nahornyioleh.be/fakeshop/SKU-SHIRT-002",
     "Name": "Denim Utility Shirt",
     "Category": "Clothes",
     "Description": "Washed denim shirt featuring double chest pockets and contrast stitching.",
@@ -25,6 +31,8 @@
   },
   {
     "SKU": "SKU-SHIRT-003",
+    "Brand": "Denim Co.",
+    "URL": "https://nahornyioleh.be/fakeshop/SKU-SHIRT-003",
     "Name": "Crimson Linen Shirt",
     "Category": "Clothes",
     "Description": "Lightweight linen button-down in a rich red tone with breathable weave.",
@@ -33,6 +41,8 @@
   },
   {
     "SKU": "SKU-TEE-001",
+    "Brand": "Denim Co.",
+    "URL": "https://nahornyioleh.be/fakeshop/SKU-TEE-001",
     "Name": "Heather Crew Tee",
     "Category": "Clothes",
     "Description": "Soft tri-blend crewneck tee with a subtle heathered finish.",
@@ -41,6 +51,8 @@
   },
   {
     "SKU": "SKU-TEE-002",
+    "Brand": "Denim Co.",
+    "URL": "https://nahornyioleh.be/fakeshop/SKU-TEE-002",
     "Name": "Forest Pocket Tee",
     "Category": "Clothes",
     "Description": "Everyday crewneck tee in a forest green shade finished with a chest pocket.",
@@ -49,6 +61,8 @@
   },
   {
     "SKU": "SKU-TEE-003",
+    "Brand": "Denim Co.",
+    "URL": "https://nahornyioleh.be/fakeshop/SKU-TEE-003",
     "Name": "Sunburst Graphic Tee",
     "Category": "Clothes",
     "Description": "Vibrant yellow tee with a relaxed fit and vintage sunburst graphic.",

@@ -42,7 +42,7 @@
       "name": "Marcus Yi"
     },
     "isbn": "9780593092222",
-    "image": "https://images.unsplash.com/photo-1455885666463-7ffcb5c632ad?auto=format&fit=crop&w=900&q=80",
+    "image": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=900&q=80",
     "description": "A practical guide to shaping creative rituals, sustainable routines, and calmer workdays.",
     "publisher": {
       "@type": "Organization",
@@ -225,7 +225,7 @@
     },
     "offers": {
       "@type": "Offer",
-      "price": 27.0,
+      "price": 26.0,
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
     }

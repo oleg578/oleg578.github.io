@@ -225,7 +225,7 @@
     },
     "offers": {
       "@type": "Offer",
-      "price": 26.0,
+      "price": 27.0,
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
     }

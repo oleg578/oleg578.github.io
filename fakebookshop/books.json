@@ -1,0 +1,233 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "The Quiet Cartographer",
+    "alternateName": "Mapping Imagination",
+    "author": {
+      "@type": "Person",
+      "name": "Elena Hart"
+    },
+    "isbn": "9780143121111",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80",
+    "description": "A lyrical novel about a mapmaker who traces forgotten stories through shifting coastlines.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Harborlight Press"
+    },
+    "datePublished": "2022-09-13",
+    "numberOfPages": 352,
+    "inLanguage": "en",
+    "bookFormat": "https://schema.org/Hardcover",
+    "genre": "Literary Fiction",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "186"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": 22.0,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Designing Slow Mornings",
+    "alternateName": "Rituals for Calm Work",
+    "author": {
+      "@type": "Person",
+      "name": "Marcus Yi"
+    },
+    "isbn": "9780593092222",
+    "image": "https://images.unsplash.com/photo-1455885666463-7ffcb5c632ad?auto=format&fit=crop&w=900&q=80",
+    "description": "A practical guide to shaping creative rituals, sustainable routines, and calmer workdays.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Studio Fieldhouse"
+    },
+    "datePublished": "2021-04-06",
+    "numberOfPages": 248,
+    "inLanguage": "en",
+    "bookFormat": "https://schema.org/Paperback",
+    "genre": "Design & Productivity",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "reviewCount": "94"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": 18.5,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "The Signal Garden",
+    "alternateName": "Essays on Modern Attention",
+    "author": {
+      "@type": "Person",
+      "name": "Priya Nandakumar"
+    },
+    "isbn": "9780385547761",
+    "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80",
+    "description": "Short essays exploring attention, technology, and how we build healthier digital lives.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Echo & Pine"
+    },
+    "datePublished": "2020-10-20",
+    "numberOfPages": 208,
+    "inLanguage": "en",
+    "bookFormat": "https://schema.org/Hardcover",
+    "genre": "Essays",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.3",
+      "reviewCount": "67"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": 20.0,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Riverlight Leadership",
+    "alternateName": "Guiding Teams with Clarity",
+    "author": {
+      "@type": "Person",
+      "name": "Camila Reyes"
+    },
+    "isbn": "9781982137274",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+    "description": "A leadership playbook blending coaching, clarity, and calm decision-making for modern teams.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Riverlight Editions"
+    },
+    "datePublished": "2019-05-07",
+    "numberOfPages": 304,
+    "inLanguage": "en",
+    "bookFormat": "https://schema.org/Hardcover",
+    "genre": "Leadership",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "132"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": 24.0,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Atlas of Small Wonders",
+    "alternateName": "Micro Adventures",
+    "author": {
+      "@type": "Person",
+      "name": "Noah Kline"
+    },
+    "isbn": "9780735217772",
+    "image": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=900&q=80",
+    "description": "A travel-inspired collection of tiny adventures designed for weekends and short breaks.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Maple House"
+    },
+    "datePublished": "2018-03-27",
+    "numberOfPages": 280,
+    "inLanguage": "en",
+    "bookFormat": "https://schema.org/Paperback",
+    "genre": "Travel",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.4",
+      "reviewCount": "78"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": 16.0,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Code for the Curious",
+    "alternateName": "A Gentle JavaScript Path",
+    "author": {
+      "@type": "Person",
+      "name": "Serena Malik"
+    },
+    "isbn": "9781492045526",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+    "description": "An approachable introduction to JavaScript fundamentals with real-world examples.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Northwind Learning"
+    },
+    "datePublished": "2023-01-10",
+    "numberOfPages": 392,
+    "inLanguage": "en",
+    "bookFormat": "https://schema.org/Paperback",
+    "genre": "Programming",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "214"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": 28.0,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "The Ember Archive",
+    "alternateName": "Chronicles of Nira",
+    "author": {
+      "@type": "Person",
+      "name": "Hugo Laurent"
+    },
+    "isbn": "9780062998883",
+    "image": "https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&w=900&q=80",
+    "description": "Epic fantasy following a historian who uncovers a city powered by ancient flame.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Emberline Books"
+    },
+    "datePublished": "2024-02-20",
+    "numberOfPages": 464,
+    "inLanguage": "en",
+    "bookFormat": "https://schema.org/Hardcover",
+    "genre": "Fantasy",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "329"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": 26.0,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+]

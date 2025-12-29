@@ -6,5 +6,6 @@ dev/
 dist/
 *.log
 *.json
+!book*.json
 !french_*.json
 !product_*.json

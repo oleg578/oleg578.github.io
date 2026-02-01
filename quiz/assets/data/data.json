@@ -1,0 +1,351 @@
+{
+  "version": 1,
+  "languages": [
+    "English",
+    "French",
+    "Dutch",
+    "German"
+  ],
+  "items": [
+    {
+      "id": "house",
+      "image": "house.png",
+      "labels": {
+        "English": "house",
+        "French": "maison",
+        "Dutch": "huis",
+        "German": "haus"
+      }
+    },
+    {
+      "id": "door",
+      "image": "door.png",
+      "labels": {
+        "English": "door",
+        "French": "porte",
+        "Dutch": "deur",
+        "German": "tür"
+      }
+    },
+    {
+      "id": "chair",
+      "image": "chair.png",
+      "labels": {
+        "English": "chair",
+        "French": "chaise",
+        "Dutch": "stoel",
+        "German": "stuhl"
+      }
+    },
+    {
+      "id": "bed",
+      "image": "bed.png",
+      "labels": {
+        "English": "bed",
+        "French": "lit",
+        "Dutch": "bed",
+        "German": "bett"
+      }
+    },
+    {
+      "id": "lamp",
+      "image": "lamp.png",
+      "labels": {
+        "English": "lamp",
+        "French": "lampe",
+        "Dutch": "lamp",
+        "German": "lampe"
+      }
+    },
+    {
+      "id": "clock",
+      "image": "clock.png",
+      "labels": {
+        "English": "clock",
+        "French": "horloge",
+        "Dutch": "klok",
+        "German": "uhr"
+      }
+    },
+    {
+      "id": "computer",
+      "image": "computer.png",
+      "labels": {
+        "English": "computer",
+        "French": "ordinateur",
+        "Dutch": "computer",
+        "German": "computer"
+      }
+    },
+    {
+      "id": "key",
+      "image": "key.png",
+      "labels": {
+        "English": "key",
+        "French": "clé",
+        "Dutch": "sleutel",
+        "German": "schlüssel"
+      }
+    },
+    {
+      "id": "bag",
+      "image": "bag.png",
+      "labels": {
+        "English": "bag",
+        "French": "sac",
+        "Dutch": "tas",
+        "German": "tasche"
+      }
+    },
+    {
+      "id": "bread",
+      "image": "bread.png",
+      "labels": {
+        "English": "bread",
+        "French": "pain",
+        "Dutch": "brood",
+        "German": "brot"
+      }
+    },
+    {
+      "id": "apple",
+      "image": "apple.png",
+      "labels": {
+        "English": "apple",
+        "French": "pomme",
+        "Dutch": "appel",
+        "German": "apfel"
+      }
+    },
+    {
+      "id": "egg",
+      "image": "egg.png",
+      "labels": {
+        "English": "egg",
+        "French": "oeuf",
+        "Dutch": "ei",
+        "German": "ei"
+      }
+    },
+    {
+      "id": "rice",
+      "image": "rice.png",
+      "labels": {
+        "English": "rice",
+        "French": "riz",
+        "Dutch": "rijst",
+        "German": "reis"
+      }
+    },
+    {
+      "id": "hand",
+      "image": "hand.png",
+      "labels": {
+        "English": "hand",
+        "French": "main",
+        "Dutch": "hand",
+        "German": "hand"
+      }
+    },
+    {
+      "id": "shirt",
+      "image": "shirt.png",
+      "labels": {
+        "English": "shirt",
+        "French": "chemise",
+        "Dutch": "overhemd",
+        "German": "hemd"
+      }
+    },
+    {
+      "id": "shoes",
+      "image": "shoes.png",
+      "labels": {
+        "English": "shoes",
+        "French": "chaussures",
+        "Dutch": "schoenen",
+        "German": "schuhe"
+      }
+    },
+    {
+      "id": "sun",
+      "image": "sun.png",
+      "labels": {
+        "English": "sun",
+        "French": "soleil",
+        "Dutch": "zon",
+        "German": "sonne"
+      }
+    },
+    {
+      "id": "moon",
+      "image": "moon.png",
+      "labels": {
+        "English": "moon",
+        "French": "lune",
+        "Dutch": "maan",
+        "German": "mond"
+      }
+    },
+    {
+      "id": "tree",
+      "image": "tree.png",
+      "labels": {
+        "English": "tree",
+        "French": "arbre",
+        "Dutch": "boom",
+        "German": "baum"
+      }
+    },
+    {
+      "id": "flower",
+      "image": "flower.png",
+      "labels": {
+        "English": "flower",
+        "French": "fleur",
+        "Dutch": "bloem",
+        "German": "blume"
+      }
+    },
+    {
+      "id": "bird",
+      "image": "bird.png",
+      "labels": {
+        "English": "bird",
+        "French": "oiseau",
+        "Dutch": "vogel",
+        "German": "vogel"
+      }
+    },
+    {
+      "id": "dog",
+      "image": "dog.png",
+      "labels": {
+        "English": "dog",
+        "French": "chien",
+        "Dutch": "hond",
+        "German": "hund"
+      }
+    },
+    {
+      "id": "cat",
+      "image": "cat.png",
+      "labels": {
+        "English": "cat",
+        "French": "chat",
+        "Dutch": "kat",
+        "German": "katze"
+      }
+    },
+    {
+      "id": "book",
+      "image": "book.png",
+      "labels": {
+        "English": "book",
+        "French": "livre",
+        "Dutch": "boek",
+        "German": "buch"
+      }
+    },
+    {
+      "id": "pen",
+      "image": "pen.png",
+      "labels": {
+        "English": "pen",
+        "French": "stylo",
+        "Dutch": "pen",
+        "German": "stift"
+      }
+    },
+    {
+      "id": "car",
+      "image": "car.png",
+      "labels": {
+        "English": "car",
+        "French": "voiture",
+        "Dutch": "auto",
+        "German": "auto"
+      }
+    },
+    {
+      "id": "bus",
+      "image": "bus.png",
+      "labels": {
+        "English": "bus",
+        "French": "bus",
+        "Dutch": "bus",
+        "German": "bus"
+      }
+    },
+    {
+      "id": "bicycle",
+      "image": "bicycle.png",
+      "labels": {
+        "English": "bicycle",
+        "French": "vélo",
+        "Dutch": "fiets",
+        "German": "fahrrad"
+      }
+    },
+    {
+      "id": "monkey",
+      "image": "monkey.png",
+      "labels": {
+        "English": "monkey",
+        "French": "singe",
+        "Dutch": "aap",
+        "German": "affe"
+      }
+    },
+    {
+      "id": "money",
+      "image": "money.png",
+      "labels": {
+        "English": "money",
+        "French": "argent",
+        "Dutch": "geld",
+        "German": "geld"
+      }
+    },
+    {
+      "id": "stadium",
+      "image": "stadium.png",
+      "labels": {
+        "English": "stadium",
+        "French": "stade",
+        "Dutch": "stadion",
+        "German": "stadion"
+      }
+    },
+    {
+      "id": "fish",
+      "image": "fish.png",
+      "labels": {
+        "English": "fish",
+        "French": "poisson",
+        "Dutch": "vis",
+        "German": "fisch"
+      }
+    },
+    {
+      "id": "shark",
+      "image": "shark.png",
+      "labels": {
+        "English": "shark",
+        "French": "requin",
+        "Dutch": "haai",
+        "German": "hai"
+      }
+    },
+    {
+      "id": "octopus",
+      "image": "octopus.png",
+      "labels": {
+        "English": "octopus",
+        "French": "poulpe",
+        "Dutch": "octopus",
+        "German": "oktopus"
+      }
+    }
+  ]
+}

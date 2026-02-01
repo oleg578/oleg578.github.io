@@ -9,3 +9,4 @@ dist/
 !book*.json
 !french_*.json
 !product_*.json
+!quiz/assets/data/*.json

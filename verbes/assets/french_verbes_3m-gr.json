@@ -308,7 +308,7 @@
             ]
         },
         "group_8_sentir_sortir_partir": {
-            "name": "Verbes du type sentir/sortir/partir",
+            "name": "Verbes du type sentir/sortir/partir/dormir",
             "pattern": "Perte de la consonne au singulier",
             "verbs": [
                 {
@@ -339,6 +339,21 @@
                         "nous": "partons",
                         "vous": "partez",
                         "ils/elles": "partent"
+                    }
+                },
+                {
+                    "infinitive": "dormir",
+                    "verbes_du_type": "endormir, rendormir",
+                    "rank": 37,
+                    "justification": "Commun dans les conversations sur le sommeil ou le repos.",
+                    "translation": "спать",
+                    "present_tense": {
+                        "je": "dors",
+                        "tu": "dors",
+                        "il/elle": "dort",
+                        "nous": "dormons",
+                        "vous": "dormez",
+                        "ils/elles": "dorment"
                     }
                 },
                 {
@@ -738,21 +753,6 @@
                         "nous": "mourons",
                         "vous": "mourez",
                         "ils/elles": "meurent"
-                    }
-                },
-                {
-                    "infinitive": "dormir",
-                    "verbes_du_type": "endormir, rendormir",
-                    "rank": 37,
-                    "justification": "Commun dans les conversations sur le sommeil ou le repos.",
-                    "translation": "спать",
-                    "present_tense": {
-                        "je": "dors",
-                        "tu": "dors",
-                        "il/elle": "dort",
-                        "nous": "dormons",
-                        "vous": "dormez",
-                        "ils/elles": "dorment"
                     }
                 },
                 {

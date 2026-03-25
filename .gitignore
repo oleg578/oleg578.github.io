@@ -10,3 +10,4 @@ dist/
 !french_*.json
 !product_*.json
 !quiz/assets/data/*.json
+.idea/*

@@ -144,7 +144,7 @@
       </g>
 
       <!-- ── PASSÉ ── -->
-      <g data-cat="passe">
+      <g data-cat="passe" class="category-label">
         <rect x="50" y="32" width="72" height="30" rx="6" fill="none" stroke="#7F77DD" stroke-width="1.8"/>
         <text x="86" y="51" text-anchor="middle" font-size="13" font-weight="600" fill="#7F77DD">PASSÉ</text>
       </g>
@@ -157,20 +157,20 @@
       </g>
 
       <!-- ── PRÉSENT ── -->
-      <g data-cat="present">
+      <g data-cat="present" class="category-label">
         <rect x="448" y="32" width="88" height="30" rx="6" fill="none" stroke="#185FA5" stroke-width="1.8"/>
         <text x="492" y="52" text-anchor="middle" font-size="13" font-weight="600" fill="#185FA5">PRÉSENT</text>
-        <rect x="452" y="67" width="80" height="22" rx="5" fill="#E6F1FB" stroke="#85B7EB" stroke-width="0.8"/>
-        <text x="492" y="82" text-anchor="middle" font-size="11" fill="#0C447C" font-weight="500">cette semaine</text>
+        <rect x="452" y="67" width="80" height="22" rx="5" fill="#E6F1FB" stroke="#85B7EB" stroke-width="0.8" class="sub-label"/>
+        <text x="492" y="82" text-anchor="middle" font-size="11" fill="#0C447C" font-weight="500" class="sub-label">cette semaine</text>
         <text x="480" y="100" text-anchor="middle" font-size="10" fill="#185FA5" opacity="0">• • •</text>
       </g>
 
       <!-- ── FUTUR ── -->
-      <g data-cat="futur">
+      <g data-cat="futur" class="category-label">
         <rect x="715" y="32" width="68" height="28" rx="6" fill="none" stroke="#BA7517" stroke-width="1.8"/>
         <text x="749" y="51" text-anchor="middle" font-size="13" font-weight="600" fill="#BA7517">FUTUR</text>
-        <rect x="715" y="64" width="72" height="26" rx="13" fill="none" stroke="#BA7517" stroke-width="1.2" stroke-dasharray="4 2"/>
-        <text x="751" y="81" text-anchor="middle" font-size="12" font-weight="500" fill="#BA7517">bientôt</text>
+        <rect x="715" y="64" width="72" height="26" rx="13" fill="none" stroke="#BA7517" stroke-width="1.2" stroke-dasharray="4 2" class="sub-label"/>
+        <text x="751" y="81" text-anchor="middle" font-size="12" font-weight="500" fill="#BA7517" class="sub-label">bientôt</text>
       </g>
 
       <!-- ══ PASSÉ expressions ══ -->
@@ -357,6 +357,10 @@
       const ppfDim = (f === 'duree' || f === 'futur' || f === 'passe') ? '0.08' : '1';
       ppfGroup.style.opacity = ppfDim;
       ppfArrowEl.style.opacity = ppfDim;
+      if (f === 'duree') {
+        document.querySelectorAll('.category-label').forEach(el => el.style.opacity = '1');
+        document.querySelectorAll('.sub-label').forEach(el => el.style.opacity = '0.08');
+      }
     });
   });
 </script>

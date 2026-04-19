@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verlaine — Analyse Prosodique Complète</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Tailwind-style light palette — high contrast */
+    --bg: #f1f5f9;          /* slate-100 */
+    --panel: #ffffff;
+    --panel2: #f8fafc;      /* slate-50 */
+    --border: #cbd5e1;      /* slate-300 */
+    --border-strong: #94a3b8; /* slate-400 */
+    --gold: #92400e;        /* amber-800 — deep brown-gold */
+    --gold-dim: #b45309;    /* amber-700 */
+    --text: #0f172a;        /* slate-900 */
+    --text-dim: #475569;    /* slate-600 */
+    --stress: #be123c;      /* rose-700 */
+    --stress-dim: #fda4af;  /* rose-300 */
+    --secondary: #b45309;   /* amber-700 */
+    --secondary-bg: #fef3c7; /* amber-100 */
+    --weak-bar: #e2e8f0;    /* slate-200 */
+    --weak-bar-b: #94a3b8;  /* slate-400 */
+    --mute: #f1f5f9;        /* slate-100 */
+    --mute-b: #cbd5e1;
+    --liaison: #c2410c;     /* orange-700 */
+    --liaison-bg: #fff7ed;  /* orange-50 */
+    --elision: #1d4ed8;     /* blue-700 */
+    --pause: #15803d;       /* green-700 */
+    --accent: #7c3aed;      /* violet-600 */
+    --stress-bar: #be123c;
+    --med-bar: #b45309;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', serif;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* HEADER */
+  header {
+    text-align: center;
+    padding: 2.5rem 2rem 2rem;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .header-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.3rem;
+  }
+
+  header .subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dim);
+  }
+
+  /* LEGEND */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    padding: 1rem 1.5rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .legend-title {
+    width: 100%;
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+  }
+
+  .leg-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .leg-bar { width: 20px; height: 3px; flex-shrink: 0; }
+
+  /* STANZA */
+  .stanza {
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    overflow: hidden;
+  }
+
+  .stanza-header {
+    background: var(--panel2);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stanza-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .stanza-scheme {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    font-style: italic;
+  }
+
+  /* VERSE ROW */
+  .verse-row {
+    padding: 1rem 1.2rem 0.8rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .verse-row:last-child { border-bottom: none; }
+
+  .verse-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+  }
+
+  .verse-num {
+    font-family: 'Cinzel', serif;
+    font-size: 0.52rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+  }
+
+  .verse-type {
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    font-style: italic;
+  }
+
+  /* Original line */
+  .line-original {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--text);
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.01em;
+  }
+
+  .syl-stress {
+    color: var(--stress);
+    border-bottom: 2px solid var(--stress);
+    padding-bottom: 1px;
+  }
+
+  .syl-secondary {
+    color: var(--accent);
+    border-bottom: 1px solid var(--gold-dim);
+    padding-bottom: 1px;
+  }
+
+  .syl-elision {
+    color: var(--elision);
+    opacity: 0.7;
+    font-size: 0.82em;
+  }
+
+  .pause-major { color: var(--pause); font-style: normal; font-size: 1.1em; }
+  .pause-minor { color: var(--pause); font-style: normal; font-size: 0.9em; opacity: 0.6; }
+
+  .liaison-sup {
+    color: var(--liaison);
+    font-style: normal;
+    font-size: 0.55em;
+    vertical-align: super;
+  }
+
+  /* IPA */
+  .line-ipa {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    background: var(--panel2);
+    padding: 0.3rem 0.7rem;
+    border-left: 2px solid var(--elision);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+
+  .ipa-stress { color: var(--stress); font-weight: bold; }
+  .ipa-liaison { color: var(--liaison); }
+  .ipa-elision { color: var(--elision); }
+
+  /* Rhythm bar */
+  .rhythm-wrap {
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .rhythm-grid {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    min-width: max-content;
+  }
+
+  .syl-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .syl-bar {
+    width: 20px;
+    border-radius: 2px 2px 0 0;
+    min-height: 3px;
+  }
+  .syl-bar.s { background: var(--stress); height: 38px; }
+  .syl-bar.m { background: var(--secondary); height: 22px; }
+  .syl-bar.w { background: var(--weak-bar); height: 10px; border: 1px solid var(--weak-bar-b); }
+  .syl-bar.x { background: var(--mute); height: 3px; border: 1px solid var(--mute-b); }
+
+  .syl-label {
+    font-size: 0.52rem;
+    color: var(--text-dim);
+    text-align: center;
+    max-width: 22px;
+    word-break: break-all;
+    line-height: 1.1;
+    font-family: 'Cinzel', serif;
+  }
+
+  .caesura {
+    width: 2px;
+    height: 44px;
+    background: var(--pause);
+    opacity: 0.8;
+    align-self: flex-end;
+    margin: 0 3px;
+  }
+
+  .count-row {
+    display: flex;
+    gap: 2px;
+    margin-top: 2px;
+  }
+  .count-cell {
+    width: 20px;
+    text-align: center;
+    font-size: 0.48rem;
+    color: var(--border-strong);
+    font-family: 'Cinzel', serif;
+  }
+  .count-sep { width: 8px; }
+
+  /* Note */
+  .verse-note {
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-top: 0.4rem;
+    padding-left: 0.5rem;
+    border-left: 2px solid var(--border);
+    line-height: 1.5;
+  }
+
+  /* Interlude */
+  .interlude {
+    text-align: center;
+    color: var(--gold-dim);
+    font-size: 0.9rem;
+    letter-spacing: 0.6em;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Summary */
+  .summary {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .summary h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .summary-block {
+    border-left: 2px solid var(--border);
+    padding-left: 0.8rem;
+  }
+
+  .summary-block h4 {
+    font-size: 0.65rem;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 0.4rem;
+  }
+
+  .summary-block p {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    .line-original { font-size: 1.1rem; }
+    header h1 { font-size: 1rem; }
+    .syl-bar { width: 16px; }
+    .syl-bar.s { height: 30px; }
+    .syl-bar.m { height: 18px; }
+    .syl-label { max-width: 18px; font-size: 0.46rem; }
+    .count-cell { width: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="header-label">Analyse prosodique intégrale</div>
+  <h1>Paul Verlaine</h1>
+  <div class="subtitle"><em>L'étang</em> — Fêtes galantes, 1869</div>
+</header>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-title">Légende</div>
+  <div class="legend-item"><div class="leg-dot" style="background:var(--stress)"></div><span>Ictus (accent tonique)</span></div>
+  <div class="legend-item"><div class="leg-dot" style="background:var(--secondary)"></div><span>Accent secondaire</span></div>
+  <div class="legend-item"><div class="leg-dot" style="background:#3a3020;border:1px solid #5a4e30"></div><span>Syllabe atone</span></div>
+  <div class="legend-item"><div class="leg-dot" style="background:var(--mute)"></div><span>E muet (ne se prononce pas)</span></div>
+  <div class="legend-item"><div class="leg-bar" style="background:var(--pause)"></div><span>Césure ‖ / coupe |</span></div>
+  <div class="legend-item"><div class="leg-bar" style="background:var(--liaison)"></div><span>Liaison obligatoire</span></div>
+  <div class="legend-item"><div class="leg-dot" style="background:var(--elision)"></div><span>Élision / e caduc</span></div>
+</div>
+
+<!-- ===== STANZA 1 ===== -->
+<div class="stanza">
+  <div class="stanza-header">
+    <span class="stanza-label">Strophe I — Quatrain</span>
+    <span class="stanza-scheme">Alexandrins · rimes AABB · féminines/masculines alternées</span>
+  </div>
+
+  <!-- V1 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 1</span><span class="verse-type">Alexandrin féminin · rime A</span></div>
+    <div class="line-original">Le cou<span class="syl-stress">chant</span> dar<span class="syl-stress">dait</span> <span class="pause-major">‖</span> ses ray<span class="syl-stress">ons</span> su<span class="syl-stress">prê</span>mes<span class="syl-elision">·e</span></div>
+    <div class="line-ipa">[ lə ku<span class="ipa-stress">ʃɑ̃</span> daʁ<span class="ipa-stress">dɛ</span> ‖ sɛ ʁɛ<span class="ipa-stress">jɔ̃</span> sy<span class="ipa-stress">pʁɛm</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Le</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">cou-</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">-chant</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">dar-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-dait</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">(e)</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">ses</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">ray-</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">-ons</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">su-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-prê-</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">-mes</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div><div class="count-cell">5</div><div class="count-cell">6</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">7</div><div class="count-cell">8</div><div class="count-cell">9</div><div class="count-cell">10</div><div class="count-cell">11</div><div class="count-cell">12</div>
+    </div></div>
+    <div class="verse-note">Rythme 3+3‖3+3 · -e final de <em>suprêmes</em> syllabe féminine non prononcée</div>
+  </div>
+
+  <!-- V2 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 2</span><span class="verse-type">Alexandrin féminin · rime A</span></div>
+    <div class="line-original">Et le vent ber<span class="syl-stress">çait</span> <span class="pause-major">‖</span> les né-nu<span class="syl-stress">phars</span> <span class="syl-stress">blê</span>mes<span class="syl-elision">·e</span></div>
+    <div class="line-ipa">[ ɛ lə vɑ̃ bɛʁ<span class="ipa-stress">sɛ</span> ‖ lɛ ne.ny<span class="ipa-stress">faʁ</span> <span class="ipa-stress">blɛm</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Et</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">le</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">vent</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">ber-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-çait</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">(e)</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">les</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">né-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-nu-</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">-phars</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">blê-</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">-mes</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div><div class="count-cell">5</div><div class="count-cell">6</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">7</div><div class="count-cell">8</div><div class="count-cell">9</div><div class="count-cell">10</div><div class="count-cell">11</div><div class="count-cell">12</div>
+    </div></div>
+    <div class="verse-note">Rime A : <em>suprêmes / blêmes</em> [-ɛm] · bercement : 2+2+2‖3+3</div>
+  </div>
+
+  <!-- V3 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 3</span><span class="verse-type">Alexandrin masculin · rime B</span></div>
+    <div class="line-original">Les grands né-nu<span class="syl-stress">phars</span> <span class="pause-major">‖</span> en-tre les ro<span class="syl-stress">seaux</span></div>
+    <div class="line-ipa">[ lɛ ɡʁɑ̃ ne.ny<span class="ipa-stress">faʁ</span> ‖ <span class="ipa-elision">ɑ̃tʁ(ə)</span> lɛ ʁo<span class="ipa-stress">zo</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Les</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">grands</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">né-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-nu-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-phars</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label"></div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">en-</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">-tre</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">les</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">ro-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-seaux</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label"></div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div><div class="count-cell">5</div><div class="count-cell">6</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">7</div><div class="count-cell">8</div><div class="count-cell">9</div><div class="count-cell">10</div><div class="count-cell">11</div><div class="count-cell">12</div>
+    </div></div>
+    <div class="verse-note">Rime B masculine [-o] · <em>entre</em> : e caduc élide devant <em>les</em></div>
+  </div>
+
+  <!-- V4 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 4</span><span class="verse-type">Alexandrin masculin · rime B</span></div>
+    <div class="line-original">Tris-te<span class="syl-secondary">ment</span> lui<span class="syl-stress">saient</span> <span class="pause-major">‖</span> sur les <span class="syl-stress">cal</span>-mes<span class="liaison-sup">z</span> <span class="syl-stress">eaux</span></div>
+    <div class="line-ipa">[ tʁis.tə<span class="ipa-stress">mɑ̃</span> lɥi<span class="ipa-stress">zɛ</span> ‖ syʁ lɛ <span class="ipa-stress">kal</span>.m<span class="ipa-liaison">z‿</span><span class="ipa-stress">o</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Tris-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-te-</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">-ment</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">lui-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-saient</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">(e)</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">sur</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">les</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">cal-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-mes</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">eaux</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label"></div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div><div class="count-cell">5</div><div class="count-cell">6</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">7</div><div class="count-cell">8</div><div class="count-cell">9</div><div class="count-cell">10</div><div class="count-cell">11</div><div class="count-cell">12</div>
+    </div></div>
+    <div class="verse-note">Liaison <em>calmes eaux</em> → [z‿o] · rime B : <em>roseaux / eaux</em> [-o]</div>
+  </div>
+</div>
+
+<div class="interlude">· · ·</div>
+
+<!-- ===== STANZA 2 ===== -->
+<div class="stanza">
+  <div class="stanza-header">
+    <span class="stanza-label">Strophe II — Sixain (octosyllabes)</span>
+    <span class="stanza-scheme">Octosyllabes · rimes AABBCC · passage au lyrisme intérieur</span>
+  </div>
+
+  <!-- V5 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 5</span><span class="verse-type">Octosyllabe féminin · rime A</span></div>
+    <div class="line-original">Moi j'er<span class="syl-stress">rais</span> tout <span class="pause-minor">|</span> seul, pro<span class="syl-stress">me</span>-nant ma <span class="syl-stress">plaie</span></div>
+    <div class="line-ipa">[ mwa ʒɛ<span class="ipa-stress">ʁɛ</span> tu | sœl pʁɔ.mə<span class="ipa-stress">nɑ̃</span> ma <span class="ipa-stress">plɛ</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">Moi</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">j'er-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-rais</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">tout</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">seul</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">pro-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-me-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-nant</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">ma</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">plaie</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">(e)</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Octosyllabe 4+4 · <em>Moi</em> = accent d'insistance lyrique · rime A féminine <em>plaie</em></div>
+  </div>
+
+  <!-- V6 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 6</span><span class="verse-type">Octosyllabe féminin · rime A</span></div>
+    <div class="line-original">Au long de l'é<span class="syl-stress">tang</span>, <span class="pause-minor">|</span> par<span class="syl-secondary">mi</span> la sau<span class="syl-stress">laie</span></div>
+    <div class="line-ipa">[ o lɔ̃ də le<span class="ipa-stress">tɑ̃</span> | paʁ<span class="ipa-stress">mi</span> la so<span class="ipa-stress">lɛ</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Au</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">long</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">de</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">l'é-tang</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">par-</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">-mi</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">la</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">sau-laie</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">(e)</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Rime A : <em>plaie / saulaie</em> [-ɛ] · <em>l'étang</em> : élision de <em>le</em></div>
+  </div>
+
+  <!-- V7 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 7</span><span class="verse-type">Octosyllabe masculin · rime B</span></div>
+    <div class="line-original">Où la <span class="syl-secondary">brume</span> va<span class="syl-stress">gue</span> <span class="pause-minor">|</span> é-vo<span class="syl-stress">quait</span> un <span class="syl-stress">grand</span></div>
+    <div class="line-ipa">[ u la <span class="ipa-stress">bʁym</span> vaɡ | e.vo<span class="ipa-stress">kɛ</span> œ̃ <span class="ipa-stress">ɡʁɑ̃</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Où</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">la</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">bru-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-me·va-gue</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">é-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-vo-</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">-quait</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">un</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">grand</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Rime B masculine : <em>grand</em> [ɡʁɑ̃] · rejet de <em>grand</em> en fin de vers crée une tension syntaxique</div>
+  </div>
+
+  <!-- V8 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 8</span><span class="verse-type">Octosyllabe masculin · rime B</span></div>
+    <div class="line-original">Fan<span class="syl-stress">tôme</span> lai<span class="syl-stress">teux</span> <span class="pause-minor">|</span> se dé-ses<span class="syl-stress">pé</span>-rant</div>
+    <div class="line-ipa">[ fɑ̃<span class="ipa-stress">tom</span> lɛ<span class="ipa-stress">tø</span> | sə de.zɛs.pe<span class="ipa-stress">ʁɑ̃</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Fan-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-tôme</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">lai-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-teux</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">se</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">dé-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-ses-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-pé-rant</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Rime B : <em>grand / désespérant</em> [-ɑ̃] · contre-rejet : <em>Fantôme</em> reprend le mot suspendu</div>
+  </div>
+
+  <!-- V9 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 9</span><span class="verse-type">Octosyllabe féminin · rime C</span></div>
+    <div class="line-original">Et pleu<span class="syl-stress">rant</span> a<span class="syl-secondary">vec</span> <span class="pause-minor">|</span> la voix des sar<span class="syl-stress">cel</span>-les<span class="syl-elision">·e</span></div>
+    <div class="line-ipa">[ ɛ plœ<span class="ipa-stress">ʁɑ̃</span> a.v<span class="ipa-stress">ɛk</span> | la vwa dɛ saʁ<span class="ipa-stress">sɛl</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Et</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">pleu-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-rant</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">a-vec</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">la</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">voix</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">des</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">sar-cel</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">-les</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Rime C féminine : <em>sarcelles</em> [-ɛl] · image sonore : les oiseaux = pleurs du fantôme</div>
+  </div>
+
+  <!-- V10 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 10</span><span class="verse-type">Octosyllabe féminin · rime C</span></div>
+    <div class="line-original">Qui se rap<span class="syl-stress">pe</span>-laient <span class="pause-minor">|</span> en bat-tant des <span class="syl-stress">ai</span>-les<span class="syl-elision">·e</span></div>
+    <div class="line-ipa">[ ki sə ʁa.pə<span class="ipa-stress">lɛ</span> | ɑ̃ ba.tɑ̃ dɛ <span class="ipa-stress">zɛl</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Qui</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">se</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">rap-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-pe-laient</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">en</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">bat-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-tant</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">des ai-les</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">(e)</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Rime C : <em>sarcelles / ailes</em> [-ɛl] · <em>des ailes</em> → liaison [z] obligatoire</div>
+  </div>
+</div>
+
+<div class="interlude">· · ·</div>
+
+<!-- ===== STANZA 3 ===== -->
+<div class="stanza">
+  <div class="stanza-header">
+    <span class="stanza-label">Strophe III — Sixain (octosyllabes)</span>
+    <span class="stanza-scheme">Retour & clôture circulaire · mélange mètre / enjambement</span>
+  </div>
+
+  <!-- V11 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 11</span><span class="verse-type">Octosyllabe féminin · rime A'</span></div>
+    <div class="line-original">Par-mi la sau<span class="syl-stress">laie</span> <span class="pause-minor">|</span> où j'er<span class="syl-stress">rais</span> tout <span class="syl-stress">seul</span></div>
+    <div class="line-ipa">[ paʁ.mi la so<span class="ipa-stress">lɛ</span> | u ʒɛ<span class="ipa-stress">ʁɛ</span> tu <span class="ipa-stress">sœl</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Par-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-mi</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">la</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">sau-laie</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">où</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">j'er-</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">-rais</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">tout seul</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Anaphore : reprise exacte de <em>saulaie / j'errais tout seul</em> — clôture circulaire du lyrisme</div>
+  </div>
+
+  <!-- V12 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 12</span><span class="verse-type">Octosyllabe masculin · rime B'</span></div>
+    <div class="line-original">Pro-me-nant ma <span class="syl-stress">plaie</span> ; <span class="pause-major">‖</span> et l'é<span class="syl-secondary">pais</span> lin<span class="syl-stress">ceul</span></div>
+    <div class="line-ipa">[ pʁɔ.mə.nɑ̃ ma <span class="ipa-stress">plɛ</span> ‖ ɛ le.<span class="ipa-stress">pɛ</span> lɛ̃<span class="ipa-stress">sœl</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Pro-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-me-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-nant</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">ma plaie</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">et</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">l'é-pais</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">lin-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-ceul</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Rime B' : <em>linceul</em> [-sœl] · enjambement syntaxique : le sujet déborde au vers suivant</div>
+  </div>
+
+  <!-- V13 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 13</span><span class="verse-type">Octosyllabe féminin · rime C'</span></div>
+    <div class="line-original">Des té<span class="syl-stress">nèbres</span> vint <span class="pause-minor">|</span> noy<span class="syl-stress">er</span> les su<span class="syl-stress">prê</span>-mes<span class="syl-elision">·e</span></div>
+    <div class="line-ipa">[ dɛ te<span class="ipa-stress">nɛbʁ</span> vɛ̃ | nwa<span class="ipa-stress">je</span> lɛ sy<span class="ipa-stress">pʁɛm</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Des</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">té-nèbres</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">vint</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label"></div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">noy-</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">-er</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">les</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">su-prêmes</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">(e)</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Rime C' : <em>suprêmes</em> [-ɛm] — écho exact de la rime A de la strophe I</div>
+  </div>
+
+  <!-- V14 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 14</span><span class="verse-type">Octosyllabe féminin · rime C'</span></div>
+    <div class="line-original">Ray<span class="syl-stress">ons</span> du cou<span class="syl-stress">chant</span> <span class="pause-minor">|</span> dans ses on<span class="syl-stress">des</span> <span class="syl-stress">blê</span>-mes<span class="syl-elision">·e</span></div>
+    <div class="line-ipa">[ ʁɛ<span class="ipa-stress">jɔ̃</span> dy ku<span class="ipa-stress">ʃɑ̃</span> | dɑ̃ sɛ<span class="ipa-stress">z‿ɔ̃d</span> <span class="ipa-stress">blɛm</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Ray-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-ons</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">du</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">cou-chant</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">dans</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">ses</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">on-des</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">blêmes</div></div>
+      <div class="syl-cell"><div class="syl-bar x"></div><div class="syl-label">(e)</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Liaison <em>ses ondes</em> → [z‿ɔ̃d] · rime C' : <em>suprêmes / blêmes</em> — retour identique à la strophe I</div>
+  </div>
+
+  <!-- V15 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 15</span><span class="verse-type">Octosyllabe masculin · rime D'</span></div>
+    <div class="line-original">Et les né-nu<span class="syl-stress">phars</span>, <span class="pause-minor">|</span> par-mi les ro<span class="syl-stress">seaux</span>,</div>
+    <div class="line-ipa">[ ɛ lɛ ne.ny<span class="ipa-stress">faʁ</span> | paʁ.mi lɛ ʁo<span class="ipa-stress">zo</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Et</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">les</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">né-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-nu-phars</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">par-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-mi</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">les</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">ro-seaux</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Rime D' [-o] · reprise quasi-verbatim du vers 3 — le monde se referme sur lui-même</div>
+  </div>
+
+  <!-- V16 -->
+  <div class="verse-row">
+    <div class="verse-meta"><span class="verse-num">Vers 16</span><span class="verse-type">Octosyllabe masculin · rime D'</span></div>
+    <div class="line-original">Les grands né-nu<span class="syl-stress">phars</span> <span class="pause-minor">|</span> sur les <span class="syl-stress">cal</span>-mes<span class="liaison-sup">z</span> <span class="syl-stress">eaux</span>.</div>
+    <div class="line-ipa">[ lɛ ɡʁɑ̃ ne.ny<span class="ipa-stress">faʁ</span> | syʁ lɛ <span class="ipa-stress">kal</span>.m<span class="ipa-liaison">z‿</span><span class="ipa-stress">o</span> ]</div>
+    <div class="rhythm-wrap"><div class="rhythm-grid">
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">Les</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">grands</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">né-</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">-nu-phars</div></div>
+      <div class="caesura"></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">sur</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">les</div></div>
+      <div class="syl-cell"><div class="syl-bar m"></div><div class="syl-label">cal-</div></div>
+      <div class="syl-cell"><div class="syl-bar w"></div><div class="syl-label">-mes</div></div>
+      <div class="syl-cell"><div class="syl-bar s"></div><div class="syl-label">eaux</div></div>
+    </div>
+    <div class="count-row">
+      <div class="count-cell">1</div><div class="count-cell">2</div><div class="count-cell">3</div><div class="count-cell">4</div>
+      <div class="count-sep"></div>
+      <div class="count-cell">5</div><div class="count-cell">6</div><div class="count-cell">7</div><div class="count-cell">8</div>
+    </div></div>
+    <div class="verse-note">Clôture du poème : reprise exacte du vers 4 · liaison <em>calmes eaux</em> [z‿o] · le lac efface tout — le moi, le fantôme, la douleur</div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary">
+  <h3>Synthèse prosodique</h3>
+  <div class="summary-grid">
+    <div class="summary-block">
+      <h4>Structure métrique</h4>
+      <p>Strophe I : 4 alexandrins (12 syllabes)<br>
+      Strophes II–III : 12 octosyllabes (8 syllabes)<br>
+      Total : 16 vers · changement de mètre = rupture vers l'intériorité</p>
+    </div>
+    <div class="summary-block">
+      <h4>Système de rimes</h4>
+      <p>AABB masculines/féminines alternées<br>
+      Rimes plates + embrassées selon la strophe<br>
+      Retour des rimes finales = structure circulaire</p>
+    </div>
+    <div class="summary-block">
+      <h4>Phonétique clé</h4>
+      <p>Nasales [-ɑ̃] [-ɔ̃] [-ɛ̃] : tonalité mélancolique<br>
+      Voyelles ouvertes [-ɛ] [-a] : plainte<br>
+      E muet : compte au milieu, s'efface à la rime</p>
+    </div>
+    <div class="summary-block">
+      <h4>Effets de lecture</h4>
+      <p>Césure 6‖6 (alexandrin) / 4|4 (octosyllabe)<br>
+      Liaisons obligatoires en [z] sur <em>calmes eaux</em><br>
+      Rejet / contre-rejet aux vers 7–8 : <em>grand / Fantôme</em></p>
+    </div>
+  </div>
+</div>
+
+</div><!-- container -->
+</body>
+</html>

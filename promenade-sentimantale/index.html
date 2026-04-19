@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Promenade sentimentale — Paul Verlaine</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --parchment: #f5eed8;
+      --ink:       #1a1209;
+      --gold:      #b8902a;
+      --muted:     #8a7860;
+      --accent:    #5c3d1e;
+      --pause:     #2e7d52;
+      --stress:    #6b4f9e;
+      --lit-bg:    rgba(107, 79, 158, 0.13);
+      --lit-fg:    #4a3470;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #1c1510;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 2.5rem 1rem 3rem;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    .page {
+      background: var(--parchment);
+      max-width: 660px;
+      width: 100%;
+      padding: 3rem 2.5rem 2.5rem;
+      position: relative;
+      box-shadow: 0 0 80px rgba(0,0,0,0.85), inset 0 0 40px rgba(184,144,42,0.07);
+    }
+
+    .page::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid var(--gold);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(184,144,42,0.35);
+    }
+
+    header .label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.58rem;
+      letter-spacing: 0.28em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+    }
+
+    header .author {
+      font-family: 'IM Fell English', serif;
+      font-style: italic;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    /* ── Poem ── */
+    #poem { margin-bottom: 2rem; }
+
+    .line {
+      font-family: 'IM Fell English', serif;
+      font-style: italic;
+      font-size: 1.28rem;
+      line-height: 2;
+      transition: color 0.35s ease, border-color 0.35s ease, font-size 0.35s ease;
+      padding: 0 0.5rem;
+      border-left: 3px solid transparent;
+    }
+
+    .line.future { color: #9e8f7c; }
+
+    .line.past {
+      color: #c0b09a;
+      font-size: 1.1rem;
+    }
+
+    .line.active {
+      color: var(--ink);
+      border-left-color: var(--gold);
+    }
+
+    /* ── Hémistiches ── */
+    .hemi {
+      display: inline;
+      border-radius: 2px;
+      padding: 0 2px;
+      transition: color 0.2s ease, background 0.2s ease,
+                  text-decoration-color 0.2s ease;
+      text-decoration: underline transparent;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1.5px;
+    }
+
+    .hemi.lit {
+      color: var(--lit-fg);
+      background: var(--lit-bg);
+      text-decoration-color: var(--stress);
+    }
+
+    /* Césure marker */
+    .cesure {
+      color: var(--pause);
+      font-style: normal;
+      font-size: 0.88em;
+      margin: 0 4px;
+      opacity: 0.65;
+      user-select: none;
+    }
+
+    /* ── Player ── */
+    .player {
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(184,144,42,0.28);
+      padding: 1.1rem 1.4rem 1.2rem;
+    }
+
+    .progress-wrap { margin-bottom: 0.75rem; }
+
+    #progress-bar {
+      width: 100%;
+      height: 3px;
+      background: rgba(184,144,42,0.2);
+      cursor: pointer;
+      border-radius: 2px;
+      position: relative;
+    }
+
+    #progress-bar-fill {
+      height: 100%;
+      background: var(--gold);
+      border-radius: 2px;
+      transition: width 0.1s linear;
+    }
+
+    .time-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.35rem;
+      font-family: 'Cinzel', serif;
+      font-size: 0.6rem;
+      color: var(--muted);
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.1rem;
+    }
+
+    .btn-ctrl {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--muted);
+      padding: 0.35rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .btn-ctrl:hover { color: var(--accent); background: rgba(184,144,42,0.1); }
+
+    #btn-play {
+      width: 42px; height: 42px;
+      background: var(--gold);
+      color: var(--parchment);
+    }
+
+    #btn-play:hover { background: var(--accent); color: var(--parchment); }
+
+    .hidden { display: none; }
+
+    /* ── Footer ── */
+    .page-footer {
+      text-align: center;
+      margin-top: 1.4rem;
+      font-family: 'Cinzel', serif;
+      font-size: 0.52rem;
+      letter-spacing: 0.18em;
+      color: rgba(184,144,42,0.45);
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="label">Karaoke prosodique · Césure · Alexandrin classique</div>
+    <h1>Promenade sentimentale</h1>
+    <div class="author">Paul Verlaine</div>
+  </header>
+
+  <div id="poem"></div>
+
+  <!-- Player -->
+  <div class="player">
+    <div class="progress-wrap">
+      <div id="progress-bar" title="Cliquer pour naviguer">
+        <div id="progress-bar-fill" style="width:0%"></div>
+      </div>
+      <div class="time-row">
+        <span id="time-current">0:00</span>
+        <span id="time-total">—</span>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="btn-ctrl" id="btn-rewind" title="−5s">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.333 4z"/>
+        </svg>
+      </button>
+      <button class="btn-ctrl" id="btn-play">
+        <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" class="hidden">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+      </button>
+      <button class="btn-ctrl" id="btn-forward" title="+5s">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="page-footer">‖ &nbsp; Césure · 1er hémistiche · 2e hémistiche &nbsp; ‖</div>
+
+</div>
+
+<audio id="audio" src="./promenade-sentimantale.mp3" preload="auto"></audio>
+
+<script>
+  // ── Poem text split at Césure (‖) into [hémistiche 1, hémistiche 2] ──────
+  // Caesura positions follow the prosodic analysis in verlaine-rhythm.html.
+  // All 16 alexandrins have a fixed 6‖6 caesura.
+  const lines = [
+    ["Le couchant dardait",    "ses rayons suprêmes"],
+    ["Et le vent berçait",     "les nénuphars blêmes ;"],
+    ["Les grands nénuphars",   "entre les roseaux"],
+    ["Tristement luisaient",   "sur les calmes eaux."],
+    ["Moi j'errais tout seul,","promenant ma plaie"],
+    ["Au long de l'étang,",    "parmi la saulaie"],
+    ["Où la brume vague",      "évoquait un grand"],
+    ["Fantôme laiteux",        "se désespérant"],
+    ["Et pleurant avec",       "la voix des sarcelles"],
+    ["Qui se rappelaient",     "en battant des ailes"],
+    ["Parmi la saulaie",       "où j'errais tout seul"],
+    ["Promenant ma plaie ;",   "et l'épais linceul"],
+    ["Des ténèbres vint",      "noyer les suprêmes"],
+    ["Rayons du couchant",     "dans ses ondes blêmes"],
+    ["Et les nénuphars,",      "parmi les roseaux,"],
+    ["Les grands nénuphars",   "sur les calmes eaux."],
+  ];
+
+  // ── Timing segments: [startSeconds, lineIndex, hemiIndex (0|1)] ──────────
+  // Derived from Whisper word-level forced alignment on the recording.
+  // Each entry fires when the corresponding hémistiche begins.
+  const segments = [
+    [0.00,  0, 0],  // Le couchant dardait
+    [2.30,  0, 1],  // ses rayons suprêmes
+    [4.12,  1, 0],  // Et le vent berçait
+    [6.42,  1, 1],  // les nénuphars blêmes
+    [9.70,  2, 0],  // Les grands nénuphars
+    [11.64, 2, 1],  // entre les roseaux
+    [13.80, 3, 0],  // Tristement luisaient
+    [15.98, 3, 1],  // sur les calmes eaux
+    [17.88, 4, 0],  // Moi j'errais tout seul
+    [23.50, 4, 1],  // promenant ma plaie
+    [24.96, 5, 0],  // Au long de l'étang
+    [26.84, 5, 1],  // parmi la saulaie
+    [29.52, 6, 0],  // Où la brume vague
+    [31.24, 6, 1],  // évoquait un grand
+    [33.80, 7, 0],  // Fantôme laiteux
+    [36.08, 7, 1],  // se désespérant
+    [37.28, 8, 0],  // Et pleurant avec
+    [40.30, 8, 1],  // la voix des sarcelles
+    [42.68, 9, 0],  // Qui se rappelaient
+    [43.72, 9, 1],  // en battant des ailes
+    [46.26, 10, 0], // Parmi la saulaie
+    [49.16, 10, 1], // où j'errais tout seul
+    [53.74, 11, 0], // Promenant ma plaie ;
+    [56.14, 11, 1], // et l'épais linceul
+    [58.54, 12, 0], // Des ténèbres vint
+    [59.50, 12, 1], // noyer les suprêmes
+    [61.80, 13, 0], // Rayons du couchant
+    [63.42, 13, 1], // dans ses ondes blêmes
+    [66.50, 14, 0], // Et les nénuphars,
+    [67.58, 14, 1], // parmi les roseaux,
+    [70.70, 15, 0], // Les grands nénuphars
+    [72.04, 15, 1], // sur les calmes eaux.
+  ];
+
+  // ── Build DOM ─────────────────────────────────────────────────────────────
+  const poemEl = document.getElementById('poem');
+
+  const lineEls = lines.map(([h0text, h1text], i) => {
+    const div   = document.createElement('div');
+    div.className = 'line future';
+
+    const h0    = document.createElement('span');
+    h0.className = 'hemi h0';
+    h0.textContent = h0text;
+
+    const sep   = document.createElement('span');
+    sep.className = 'cesure';
+    sep.textContent = ' ‖ ';
+
+    const h1    = document.createElement('span');
+    h1.className = 'hemi h1';
+    h1.textContent = h1text;
+
+    div.append(h0, sep, h1);
+    poemEl.appendChild(div);
+    return div;
+  });
+
+  // ── Highlight logic ───────────────────────────────────────────────────────
+  function updateHighlight(t) {
+    let activeSeg = -1;
+    for (let i = segments.length - 1; i >= 0; i--) {
+      if (t >= segments[i][0]) { activeSeg = i; break; }
+    }
+
+    const activeLine = activeSeg >= 0 ? segments[activeSeg][1] : -1;
+    const activeHalf = activeSeg >= 0 ? segments[activeSeg][2] : -1;
+
+    lineEls.forEach((el, li) => {
+      el.className = 'line ' + (li < activeLine ? 'past' : li === activeLine ? 'active' : 'future');
+      el.querySelector('.h0').classList.toggle('lit', li === activeLine && activeHalf === 0);
+      el.querySelector('.h1').classList.toggle('lit', li === activeLine && activeHalf === 1);
+    });
+
+    if (activeLine >= 0) {
+      lineEls[activeLine].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  // ── Player wiring ─────────────────────────────────────────────────────────
+  const audio     = document.getElementById('audio');
+  const btnPlay   = document.getElementById('btn-play');
+  const iconPlay  = document.getElementById('icon-play');
+  const iconPause = document.getElementById('icon-pause');
+  const bar       = document.getElementById('progress-bar');
+  const fill      = document.getElementById('progress-bar-fill');
+  const timeCur   = document.getElementById('time-current');
+  const timeTotal = document.getElementById('time-total');
+
+  function fmt(s) {
+    return `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2,'0')}`;
+  }
+
+  audio.addEventListener('timeupdate', () => {
+    const t = audio.currentTime, dur = audio.duration || 0;
+    updateHighlight(t);
+    fill.style.width = dur ? (t / dur * 100) + '%' : '0%';
+    timeCur.textContent = fmt(t);
+  });
+
+  audio.addEventListener('loadedmetadata', () => { timeTotal.textContent = fmt(audio.duration); });
+  audio.addEventListener('play',  () => { iconPlay.classList.add('hidden');    iconPause.classList.remove('hidden'); });
+  audio.addEventListener('pause', () => { iconPlay.classList.remove('hidden'); iconPause.classList.add('hidden'); });
+  audio.addEventListener('ended', () => { iconPlay.classList.remove('hidden'); iconPause.classList.add('hidden'); });
+
+  btnPlay.addEventListener('click', () => { audio.paused ? audio.play() : audio.pause(); });
+
+  document.getElementById('btn-rewind').addEventListener('click', () => {
+    audio.currentTime = Math.max(0, audio.currentTime - 5);
+  });
+  document.getElementById('btn-forward').addEventListener('click', () => {
+    audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 5);
+  });
+
+  bar.addEventListener('click', (e) => {
+    const r = bar.getBoundingClientRect();
+    audio.currentTime = ((e.clientX - r.left) / r.width) * (audio.duration || 0);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'INPUT') return;
+    if (e.code === 'Space')      { e.preventDefault(); audio.paused ? audio.play() : audio.pause(); }
+    if (e.code === 'ArrowLeft')  audio.currentTime = Math.max(0, audio.currentTime - 5);
+    if (e.code === 'ArrowRight') audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 5);
+  });
+</script>
+</body>
+</html>

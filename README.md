@@ -18,7 +18,7 @@ This repository contains multiple sub-projects and pages:
 
 ## Structure
 
-```
+```bash
 ├── index.html              # Main landing page
 ├── sitemap.xml            # SEO sitemap
 ├── CNAME                  # Custom domain configuration

@@ -12,6 +12,18 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./icons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="./icons/android-chrome-512x512.png">
     <title>Nahornyi Oleh</title>
+    <script>
+        // Apply the saved (or system) theme before paint to avoid a flash.
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (t !== 'light' && t !== 'dark') {
+                    t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                }
+                if (t === 'dark') document.documentElement.classList.add('dark');
+            } catch (e) {}
+        })();
+    </script>
     <meta name="description"
           content="Personal website of Oleh Nahornyi - Software Engineer. Explore engineering projects, technical articles on Go and web development, and connect via GitHub and LinkedIn."/>
     <script type="application/ld+json">

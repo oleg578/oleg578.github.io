@@ -39,7 +39,6 @@ Sub-projects:
   - `fakebookshop`
   - `iclock`
   - `verbes` (FR app)
-  - `verbes/ru` (FR app Russian variant)
   - `quiz`
   - `ligne_du_temps`
   - `promenade-sentimentale`

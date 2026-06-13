@@ -13,7 +13,6 @@ This repository contains multiple sub-projects and pages:
 - **[fetch-sql-data-in-go](./fetch-sql-data-in-go/)** - Tutorial on connecting Go applications to MariaDB/MySQL
 - **[iclock](./iclock/)** - Interactive clock application
 - **[verbes](./verbes/)** - French verb conjugation app (English version)
-- **[verbes/ru](./verbes/ru/)** - French verb conjugation app (Russian version)
 
 ## Structure
 

@@ -1,0 +1,76 @@
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; never cancel an in-progress production deploy.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build landing page
+        run: npm run build
+
+      - name: Assemble site (committed sub-projects + freshly built landing page)
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          # Copy the deployable repo contents (sub-projects, shared assets, CNAME,
+          # sitemap, manifest...) while excluding source/tooling/build artifacts.
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='node_modules' \
+            --exclude='src' \
+            --exclude='dist' \
+            --exclude='_site' \
+            --exclude='package.json' \
+            --exclude='package-lock.json' \
+            --exclude='tsconfig*.json' \
+            --exclude='tsconfig*.tsbuildinfo' \
+            --exclude='vite.config.ts' \
+            --exclude='*.tsbuildinfo' \
+            --exclude='.gitignore' \
+            --exclude='README.md' \
+            ./ _site/
+          # Drop the previous landing bundles, then overlay the new Vite build.
+          # Only root-level landing bundles match; sub-project bundles live under
+          # their own dirs (e.g. _site/fakeshop/assets/) and are left untouched.
+          rm -f _site/assets/index-*.js _site/assets/index-*.css
+          cp dist/index.html _site/index.html
+          cp -r dist/assets/. _site/assets/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

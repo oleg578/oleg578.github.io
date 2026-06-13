@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* src/ is gitignored in this repo, so Tailwind's automatic source detection
+   skips it. Register it explicitly — @source paths are always scanned. */
+@source "./**/*.{ts,tsx}";
+
+/* Class-based dark mode: toggle `.dark` on <html> instead of relying on the
+   prefers-color-scheme media query, so the switcher can override the OS. */
+@custom-variant dark {
+  &:where(.dark, .dark *) {
+    @slot;
+  }
+}
+
+/* Flat, ascetic page background — solid surfaces, no gradients. */
+.page-bg {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.dark .page-bg {
+  background-color: #0a0a0a;
+}

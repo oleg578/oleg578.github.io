@@ -2,14 +2,20 @@
 .idea/
 node_modules/
 misc/
-src/
 dev/
 dist/
 *.log
 *.tsbuildinfo
+_site/
 *.json
 !book*.json
 !french_*.json
 !product_*.json
 !quiz/assets/data/*.json
 .idea/*
+
+# Vite landing-page source (this repo is now the source for the landing page,
+# built and deployed by .github/workflows/deploy.yml). src/ is tracked.
+!package.json
+!package-lock.json
+!tsconfig*.json

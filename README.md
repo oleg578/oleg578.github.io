@@ -12,7 +12,6 @@ This repository contains multiple sub-projects and pages:
 - **[fakedata](./fakedata/)** - Sample product data for testing
 - **[fetch-sql-data-in-go](./fetch-sql-data-in-go/)** - Tutorial on connecting Go applications to MariaDB/MySQL
 - **[iclock](./iclock/)** - Interactive clock application
-- **[swiftcsv](./swiftcsv/)** - CSV handling tool
 - **[verbes](./verbes/)** - French verb conjugation app (English version)
 - **[verbes/ru](./verbes/ru/)** - French verb conjugation app (Russian version)
 

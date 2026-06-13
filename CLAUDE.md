@@ -38,7 +38,6 @@ Sub-projects:
   - `fakedata`
   - `fakebookshop`
   - `iclock`
-  - `swiftcsv`
   - `verbes` (FR app)
   - `verbes/ru` (FR app Russian variant)
   - `quiz`

@@ -29,9 +29,21 @@ data file that must ship, confirm it matches an allow-list pattern or `git add -
   `index.html` and (usually) its own `assets/`. They are independent — assets are scoped per
   project, not shared.
 
-Sub-projects: `fakeshop` + `fakedata`, `fakebookshop`, `fetch-sql-data-in-go` (article),
-`iclock`, `swiftcsv`, `verbes` (FR app, with `verbes/ru` Russian variant), `quiz`,
-`ligne_du_temps`, `promenade-sentimentale`.
+Sub-projects:
+
+- articles:
+  - `fetch-sql-data-in-go`
+- sub-pages (independent of main):
+  - `fakeshop`
+  - `fakedata`
+  - `fakebookshop`
+  - `iclock`
+  - `swiftcsv`
+  - `verbes` (FR app)
+  - `verbes/ru` (FR app Russian variant)
+  - `quiz`
+  - `ligne_du_temps`
+  - `promenade-sentimentale`
 
 ## When changing the site
 

@@ -15,14 +15,23 @@ filenames like `assets/index-CzAtAFVp.js` and `assets/index-CuDTCEzF.css`. Do no
 minified bundles by hand — they are regenerated upstream and copied here. Editing them directly is
 almost always the wrong move; flag it instead.
 
+This now includes the **root landing page itself**: it is a Vite + React + Tailwind v4 project
+(`package.json` name `nahornyioleh-landing`) whose source lives in the gitignored `src/` at the repo
+root. `npm run build` produces the output that is copied to the repo root for GitHub Pages. So the
+landing page is also a build artifact — edit it upstream in `src/`, not in the committed output.
+
 `*.json` is gitignored except the data files explicitly allow-listed in `.gitignore`
 (`book*.json`, `french_*.json`, `product_*.json`, `quiz/assets/data/*.json`). When adding a JSON
 data file that must ship, confirm it matches an allow-list pattern or `git add -f` it.
 
 ## Structure
 
-- `index.html` — hand-written landing page (not a build artifact). Contains schema.org JSON-LD
-  describing each sub-project; keep it in sync when adding/removing projects.
+- `index.html` — Vite entry HTML for the root React landing app (`<div id="root">` + the
+  `src/main.tsx` module). Still contains schema.org JSON-LD describing each sub-project; keep it in
+  sync when adding/removing projects, but make those edits in the upstream `src/` template, not the
+  copied output. An inline `<head>` script applies the light/dark theme before paint: it reads
+  `localStorage['theme']` (`'light'`/`'dark'`), falls back to `prefers-color-scheme`, and toggles a
+  `.dark` class on `<html>` (Tailwind v4 dark variant).
 - Top-level icon/asset dirs (`icons/`, `assets/`, `images/`, `static/`, `favicon_io/`,
   `css-dist/`) serve the landing page.
 - Each other directory is a self-contained sub-site reached at `/{dir}/`, each with its own

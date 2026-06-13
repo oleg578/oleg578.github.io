@@ -6,6 +6,7 @@ src/
 dev/
 dist/
 *.log
+*.tsbuildinfo
 *.json
 !book*.json
 !french_*.json

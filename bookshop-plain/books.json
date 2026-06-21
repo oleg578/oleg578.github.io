@@ -1,0 +1,177 @@
+[
+  {
+    "name": "The Quiet Cartographer",
+    "alternateName": "Mapping Imagination",
+    "author": {
+      "name": "Elena Hart"
+    },
+    "isbn": "9780143121111",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80",
+    "description": "A lyrical novel about a mapmaker who traces forgotten stories through shifting coastlines.",
+    "publisher": {
+      "name": "Harborlight Press"
+    },
+    "datePublished": "2022-09-13",
+    "numberOfPages": 352,
+    "inLanguage": "en",
+    "genre": "Literary Fiction",
+    "aggregateRating": {
+      "ratingValue": "4.7",
+      "reviewCount": "186"
+    },
+    "offers": {
+      "price": 22,
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "name": "Designing Slow Mornings",
+    "alternateName": "Rituals for Calm Work",
+    "author": {
+      "name": "Marcus Yi"
+    },
+    "isbn": "9780593092222",
+    "image": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=900&q=80",
+    "description": "A practical guide to shaping creative rituals, sustainable routines, and calmer workdays.",
+    "publisher": {
+      "name": "Studio Fieldhouse"
+    },
+    "datePublished": "2021-04-06",
+    "numberOfPages": 248,
+    "inLanguage": "en",
+    "genre": "Design & Productivity",
+    "aggregateRating": {
+      "ratingValue": "4.5",
+      "reviewCount": "94"
+    },
+    "offers": {
+      "price": 18.5,
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "name": "The Signal Garden",
+    "alternateName": "Essays on Modern Attention",
+    "author": {
+      "name": "Priya Nandakumar"
+    },
+    "isbn": "9780385547761",
+    "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80",
+    "description": "Short essays exploring attention, technology, and how we build healthier digital lives.",
+    "publisher": {
+      "name": "Echo & Pine"
+    },
+    "datePublished": "2020-10-20",
+    "numberOfPages": 208,
+    "inLanguage": "en",
+    "genre": "Essays",
+    "aggregateRating": {
+      "ratingValue": "4.3",
+      "reviewCount": "67"
+    },
+    "offers": {
+      "price": 20,
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "name": "Riverlight Leadership",
+    "alternateName": "Guiding Teams with Clarity",
+    "author": {
+      "name": "Camila Reyes"
+    },
+    "isbn": "9781982137274",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+    "description": "A leadership playbook blending coaching, clarity, and calm decision-making for modern teams.",
+    "publisher": {
+      "name": "Riverlight Editions"
+    },
+    "datePublished": "2019-05-07",
+    "numberOfPages": 304,
+    "inLanguage": "en",
+    "genre": "Leadership",
+    "aggregateRating": {
+      "ratingValue": "4.6",
+      "reviewCount": "132"
+    },
+    "offers": {
+      "price": 24,
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "name": "Atlas of Small Wonders",
+    "alternateName": "Micro Adventures",
+    "author": {
+      "name": "Noah Kline"
+    },
+    "isbn": "9780735217772",
+    "image": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=900&q=80",
+    "description": "A travel-inspired collection of tiny adventures designed for weekends and short breaks.",
+    "publisher": {
+      "name": "Maple House"
+    },
+    "datePublished": "2018-03-27",
+    "numberOfPages": 280,
+    "inLanguage": "en",
+    "genre": "Travel",
+    "aggregateRating": {
+      "ratingValue": "4.4",
+      "reviewCount": "78"
+    },
+    "offers": {
+      "price": 16,
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "name": "Code for the Curious",
+    "alternateName": "A Gentle JavaScript Path",
+    "author": {
+      "name": "Serena Malik"
+    },
+    "isbn": "9781492045526",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+    "description": "An approachable introduction to JavaScript fundamentals with real-world examples.",
+    "publisher": {
+      "name": "Northwind Learning"
+    },
+    "datePublished": "2023-01-10",
+    "numberOfPages": 392,
+    "inLanguage": "en",
+    "genre": "Programming",
+    "aggregateRating": {
+      "ratingValue": "4.8",
+      "reviewCount": "214"
+    },
+    "offers": {
+      "price": 28,
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "name": "The Ember Archive",
+    "alternateName": "Chronicles of Nira",
+    "author": {
+      "name": "Hugo Laurent"
+    },
+    "isbn": "9780062998883",
+    "image": "https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&w=900&q=80",
+    "description": "Epic fantasy following a historian who uncovers a city powered by ancient flame.",
+    "publisher": {
+      "name": "Emberline Books"
+    },
+    "datePublished": "2024-02-20",
+    "numberOfPages": 464,
+    "inLanguage": "en",
+    "genre": "Fantasy",
+    "aggregateRating": {
+      "ratingValue": "4.9",
+      "reviewCount": "329"
+    },
+    "offers": {
+      "price": 26,
+      "priceCurrency": "USD"
+    }
+  }
+]
